@@ -31,7 +31,7 @@ const Contact = () => {
           className='lg:flex-1 lg:pt-32 px-4'
            >
             <h1 className='h1'>contate-me</h1>
-            <p className='mb-12'>Eu amaria receber sugestões de você.</p>
+            <p className='mb-12'>Eu adoraria receber sugestões de você.</p>
             {/* form */}
             <form className='flex flex-col gap-y-4 '>
               <div className='flex gap-x-10'>
