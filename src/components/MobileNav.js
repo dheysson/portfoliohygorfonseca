@@ -24,6 +24,7 @@ const menuVariants = {
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <nav className='text-primary xl:hidden'>
       {/* nav open button */}
@@ -45,16 +46,16 @@ const MobileNav = () => {
         <ul className='h-full flex flex-col justify-center items-center gap-y-8
          text-primary font-primary font-bold text-3xl'>
           <li>
-            <Link to='/'>Início</Link>
+            <Link onClick={() => setOpenMenu(false)} to='/'>Início</Link>
           </li>
           <li>
-            <Link to='/about'>Sobre</Link>
+            <Link onClick={() => setOpenMenu(false)} to='/about'>Sobre</Link>
           </li>
           <li>
-            <Link to='/portfolio'>Portfólio</Link>
+            <Link onClick={() => setOpenMenu(false)} to='/portfolio'>Portfólio</Link>
           </li>
           <li>
-            <Link to='/contact'>Contato</Link>
+            <Link onClick={() => setOpenMenu(false)} to='/contact'>Contato</Link>
           </li>
         </ul>
       </motion.div>

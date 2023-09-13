@@ -18,6 +18,10 @@ module.exports = {
 
         accent: '#EEF7F9',
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '13': 'repeat(auto-fit, minmax(250px, 1fr))',
+      }
     },
   },
   plugins: [],

@@ -10,6 +10,8 @@ import { transition1 } from '../transitions';
 
 import { CursorContext } from '../context/CursorContext'
 
+import MobileNav from '../components/MobileNav';
+
 const About = () => {
   const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext)
   return (
@@ -40,7 +42,7 @@ const About = () => {
             className='flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center
             items-center lg:items-start'
              >
-              <h1 className='h1'>Sobre mim</h1>
+              <h1 className='h1_v1 pt-36'>Sobre mim</h1>
               <p className='mb-12 max-w-sm'>
                   Comecei minha <b> carreira em fotografia </b>amadora colecionando momentos apenas com o 
                   aparelho celular desde 2020 e depois no final do ano de 2022 e começo de 2023

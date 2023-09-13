@@ -5,6 +5,21 @@ import Image2 from '../img/portfolio/2.png';
 import Image3 from '../img/portfolio/3.png';
 import Image4 from '../img/portfolio/4.png';
 
+// ensaio para marca
+import Thumb1 from '../img/portfolio/ensaiomarca/thumb.jpg'
+import Photo1 from '../img/portfolio/ensaiomarca/photo (1).jpg'
+import Photo2 from '../img/portfolio/ensaiomarca/photo (2).jpg'
+import Photo3 from '../img/portfolio/ensaiomarca/photo (3).jpg'
+
+// fotos esportivas
+import Thumb2 from '../img/portfolio/esportiva/thumb.jpg'
+
+// ensaio normal
+import Thumb3 from '../img/portfolio/ensaio/thumb.jpg'
+
+// marketing
+import Thumb4 from '../img/portfolio/marketing/thumb.jpg'
+
 import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
@@ -17,12 +32,11 @@ const Portfolio = () => {
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
     <motion.section 
-    initial={{opacity: 0, y: '-50%'}}
+    initial={{opacity: 0, y: '100%'}}
     animate={{opacity: 1, y: 0}}
-    exit={{opacity: 0, y: '-50%'}}
+    exit={{opacity: 0, y: '100%'}}
     transition={transition1}
-    className='section xl:overflow-hidden'
-    >
+    className='section'>
       <div className='container mx-auto h-full relative'>
         <div className='flex flex-col lg:flex-row h-full items-center 
         justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
@@ -36,45 +50,59 @@ const Portfolio = () => {
           onMouseLeave={mouseLeaverHandler}
           className='flex flex-col lg:items-start'
           >
-            <h1 className='h1'>Portfólio</h1>
-            <p className='mb-12 max-w-sm'>
-                Lorem ipsim dolor sit<b> amet consectetur </b>adipisicing  elit. Exercitationem veritatis.
-                Veritatis illum aut, reprehenderit sed dolorem dolore
-                <br/>
-                <br/>
-                Aliquip nisi veniam dolor. Do aliquip commodo magna ea 
-                pariatur occaecat in officia cupidatat fugiat aute.
-                
-              </p>
+            <h1 className='h1 pb-20'>Portfólio</h1>
               <Link to={'/contact'} className='btn mb-[30px] mx-auto lg:mx-0'>
                 Contrate-me
               </Link>
           </motion.div>    
           {/* image grid*/}
-          <div 
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaverHandler}
-          className='grid grid-cols-2 lg:gap-2'>
+          <div className='grid grid-cols-2 lg:gap-2'>
             {/* image */}
-            <div className='max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px]
+            <motion.div
+            // whileHover={{opacity: '0.5'}}
+            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+            bg-[#E4E8E5] overflow-hidden'>
+              <img className='w-[540px] object-top object-cover h-full lg:h-[360px] 
+              hover:scale-110 translate-all duration-500' src={Thumb1} alt=''/>
+            </motion.div>
+
+            <motion.div 
+            // whileHover={{opacity: '0.5'}}
+            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
              bg-accent overflow-hidden'>
-              <img className='object-cover h-full lg:h-[220px] 
-              hover:scale-110 translate-all duration-500' src={Image1} alt=''/>
+              <img className='w-[540px] object-cover h-full lg:h-[360px] 
+              hover:scale-110 translate-all duration-500' src={Thumb2} alt=''/>
+            </motion.div>
+
+            <motion.div
+            // whileHover={{opacity: '0.5'}}
+            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+             bg-accent overflow-hidden'>
+              <img className='w-[540px] object-top object-cover h-full lg:h-[360px] 
+              hover:scale-110 translate-all duration-500' src={Thumb3} alt=''/>
+            </motion.div>
+
+            <motion.div
+            // whileHover={{opacity: '0.5'}}
+            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+             bg-accent overflow-hidden'>
+              <img className='w-[540px] object-top object-cover h-[540px] lg:h-[360px] 
+              hover:scale-110 translate-all duration-500' src={Thumb4} alt=''/>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="container mx-auto">
+          <h1 className='h1_v1'>fotografia de moda</h1>
+          <div class="grid-cols-3 pt-20 space-y-2 bg-white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+            <div class="w-full rounded">
+                <img src={Photo2} />
             </div>
-            <div className='max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px]
-             bg-accent overflow-hidden'>
-              <img className='object-cover h-full lg:h-[220px] 
-              hover:scale-110 translate-all duration-500' src={Image2} alt=''/>
+            <div class="w-full col-span-2 row-span-2 rounded">
+                <img src={Photo1} />
             </div>
-            <div className='max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px]
-             bg-accent overflow-hidden'>
-              <img className='object-cover h-full lg:h-[220px] 
-              hover:scale-110 translate-all duration-500' src={Image3} alt=''/>
-            </div>
-            <div className='max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px]
-             bg-accent overflow-hidden'>
-              <img className='object-cover h-full lg:h-[220px] 
-              hover:scale-110 translate-all duration-500' src={Image4} alt=''/>
+            <div class="w-full rounded">
+                <img src={Photo3} />
             </div>
           </div>
         </div>

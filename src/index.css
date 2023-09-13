@@ -6,9 +6,22 @@
   body {
     @apply text-primary font-secondary bg-white;
   }
+  .wide {
+    @apply col-span-2;
+  }
+  .tall {
+    @apply row-span-2;
+  }
+  .big {
+    @apply col-span-2 row-span-2;
+  }
   .h1 {
     @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
   }
+  .h1_v1 {
+    @apply text-[54px] lg:text-[108px] font-primary font-bold leading-[120%] tracking-[-0.05em] mb-2;
+  }
+  
   .section {
     @apply h-screen w-screen;
   }
