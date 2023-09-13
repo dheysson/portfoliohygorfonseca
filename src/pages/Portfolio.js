@@ -50,7 +50,7 @@ const Portfolio = () => {
           onMouseLeave={mouseLeaverHandler}
           className='flex flex-col lg:items-start'
           >
-            <h1 className='h1 pb-20'>Portfólio</h1>
+            <h1 className='h1 pb-10'>Portfólio</h1>
               <Link to={'/contact'} className='btn mb-[30px] mx-auto lg:mx-0'>
                 Contrate-me
               </Link>
