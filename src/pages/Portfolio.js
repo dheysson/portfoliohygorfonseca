@@ -60,7 +60,7 @@ const Portfolio = () => {
             {/* image */}
             <motion.div
             // whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
             bg-[#E4E8E5] overflow-hidden'>
               <img className='w-[540px] object-top object-cover h-full lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb1} alt=''/>
@@ -68,7 +68,7 @@ const Portfolio = () => {
 
             <motion.div 
             // whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
              bg-accent overflow-hidden'>
               <img className='w-[540px] object-cover h-full lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb2} alt=''/>
@@ -76,7 +76,7 @@ const Portfolio = () => {
 
             <motion.div
             // whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
              bg-accent overflow-hidden'>
               <img className='w-[540px] object-top object-cover h-full lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb3} alt=''/>
@@ -84,7 +84,7 @@ const Portfolio = () => {
 
             <motion.div
             // whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[540px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
              bg-accent overflow-hidden'>
               <img className='w-[540px] object-top object-cover h-[540px] lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb4} alt=''/>
@@ -92,7 +92,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="container mx-auto">
+        <div className="container mx-auto xl:pt-20">
           <h1 className='h1_v1'>fotografia de moda</h1>
           <div class="grid-cols-3 pt-20 space-y-2 bg-white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
             <div class="w-full rounded">
