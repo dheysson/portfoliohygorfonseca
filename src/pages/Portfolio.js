@@ -94,7 +94,7 @@ const Portfolio = () => {
 
         <div className="container mx-auto pt-10 xl:pt-20">
           <h1 className='h1_v1 text-[48px] xl:text-7xl'>fotografia de moda</h1>
-          <div class="grid grid-cols-3 gap-2 pt-20 space-y-2 bg-white 
+          <div class="grid grid-cols-3 gap-3 pt-20 space-y-0 bg-white 
           lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
             <div class="w-full rounded">
                 <img src={Photo2} />
