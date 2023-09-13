@@ -62,7 +62,7 @@ const Portfolio = () => {
             // whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
             bg-[#E4E8E5] overflow-hidden'>
-              <img className='w-[540px] object-top object-cover h-full lg:h-[360px] 
+              <img className='w-[540px] object-top object-cover h-[220px] lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb1} alt=''/>
             </motion.div>
 
@@ -70,7 +70,7 @@ const Portfolio = () => {
             // whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
              bg-accent overflow-hidden'>
-              <img className='w-[540px] object-cover h-full lg:h-[360px] 
+              <img className='w-[540px] object-cover h-[220px] lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb2} alt=''/>
             </motion.div>
 
@@ -78,7 +78,7 @@ const Portfolio = () => {
             // whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
              bg-accent overflow-hidden'>
-              <img className='w-[540px] object-top object-cover h-full lg:h-[360px] 
+              <img className='w-[540px] object-top object-cover h-[220px] lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb3} alt=''/>
             </motion.div>
 
@@ -86,7 +86,7 @@ const Portfolio = () => {
             // whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
              bg-accent overflow-hidden'>
-              <img className='w-[540px] object-top object-cover h-[540px] lg:h-[360px] 
+              <img className='w-[540px] object-top object-cover h-[220px] lg:h-[360px] 
               hover:scale-110 translate-all duration-500' src={Thumb4} alt=''/>
             </motion.div>
           </div>
