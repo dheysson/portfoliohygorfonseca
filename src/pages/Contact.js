@@ -76,9 +76,7 @@ const Contact = () => {
                 </form> */}
             </div>
           {/* image */}
-          <motion.div 
-          onMouseEnter={mouseEnterHandler}
-          onMouseLeave={mouseLeaverHandler}
+          <motion.div
           className='lg:flex-1'>
             <img src={Photographer} alt=''/>
           </motion.div>

@@ -111,11 +111,11 @@ const Portfolio = () => {
             <motion.div
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-            bg-[#E4E8E5] overflow-hidden'>
+            bg-accent overflow-hidden'>
               <div className='relative'>
-                <a className='button' id='0'>
-                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />
-                </a>
+              <a className='button' id='0'>
+                  <BsFillArrowRightSquareFill className='z-20 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />
+              </a>
                 <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb1} alt=''/>
               </div>
@@ -161,6 +161,7 @@ const Portfolio = () => {
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb4} alt=''/>
               </div>
             </motion.div> 
+            
           </div>
         </div>
 
