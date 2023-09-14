@@ -8,7 +8,7 @@
   }
 
   .title_grid {
-    @apply grid grid-cols-3 gap-3 pt-0 space-y-0 bg-white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-2 m-5;
+    @apply grid grid-cols-3 gap-2 pt-0 space-y-0 bg-white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-2 m-2;
   }
 
   .reveal.active {
@@ -43,7 +43,18 @@
     @apply h-screen w-screen;
   }
   .btn {
-    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+    @apply rounded-md py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+  }
+
+
+  * {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
   }
 
   /* width */
