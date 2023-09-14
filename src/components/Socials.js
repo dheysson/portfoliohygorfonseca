@@ -23,7 +23,7 @@ const Socials = () => {
           </a>
         </li>
         <li>
-          <a href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+seu+portfolio.' target='_blank'>
+          <a href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+site.' target='_blank'>
           <ImWhatsapp className='w-[22px] h-[22px]'/>
           </a>
         </li>

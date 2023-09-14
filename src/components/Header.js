@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 
 //import components
 import Socials from './Socials';
@@ -11,8 +11,9 @@ import { CursorContext } from '../context/CursorContext';
 
 const Header = () => {
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
+
   return (
-    <header className='fixed w-full px-[15px]
+    <header className='fixed w-full px-[15px] bg-white xl:bg-[#ffffff00]
     lg:pr-[100px] lg:pl-[50px] z-30 h-[65px] lg:h-[140px] flex items-center'>
       <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
         {/* {Logo} */}

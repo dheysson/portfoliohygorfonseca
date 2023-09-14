@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 
-
 // ensaio para marca
 import Thumb1 from '../img/portfolio/ensaiomarca/thumb.jpg'
 import Photo1 from '../img/portfolio/ensaiomarca/photo (1).jpg'
@@ -33,7 +32,7 @@ import { transition1 } from '../transitions';
 
 import { CursorContext } from '../context/CursorContext'
 
-import { BsFillArrowRightSquareFill } from 'react-icons/bs'
+// import { BsFillArrowRightSquareFill } from 'react-icons/bs'
 
 const Portfolio = () => {
   function reveal() {
@@ -52,35 +51,47 @@ const Portfolio = () => {
 
   window.addEventListener("scroll", reveal);
 
-  // scroll into view
-  document.querySelectorAll('.button').forEach(element => element.addEventListener("click", (ev) => {
-    var id = ev.target.parentNode.parentNode.getAttribute('id');
+  function log(ev){
+    var item = (ev.target.parentNode.getAttribute('id'));
+    console.log(item)
     var grids = document.querySelectorAll('.id');
-    switch(id) {
-      case '0':
-        grids[1].firstChild.scrollIntoView();
-         break;
-      case '1':
-        grids[2].firstChild.scrollIntoView();
+    switch(item) {
+      case 'p_moda':
+        window.scrollTo(0, 2200)
         break;
-      case '2':
-        grids[3].firstChild.scrollIntoView();
+      case 'p_esportiva':
+        window.scrollTo(0, 3350)
         break;
-        case '3':
-        grids[0].firstChild.scrollIntoView();
+      case 'p_ensaio':
+        window.scrollTo(0, 4575)
         break;
+      case 'p_corporativo':
+        window.scrollTo(0, 1050)
+        break;
+
+        case 'm_moda':
+          window.scrollTo(0, 2500)
+          break;
+        case 'm_esportiva':
+          window.scrollTo(0, 3000)
+          break;
+        case 'm_ensaio':
+          window.scrollTo(0, document.body.scrollHeight);
+          break;
+        case 'm_corporativo':
+          window.scrollTo(0, 2000)
+          break;
     }
-  }))
+  }
 
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
     <motion.section 
-    initial={{opacity: 0, y: '100%'}}
-    animate={{opacity: 1, y: 0}}
-    exit={{opacity: 0, y: '100%'}}
-    transition={transition1}
-    className='section'>
-
+      initial={{opacity: 0, y: '100%'}}
+      animate={{opacity: 1, y: 0}}
+      exit={{opacity: 0, y: '100%'}}
+      transition={transition1}
+      className='section'>
       {/* No modo Desktop */}
       <div className='hidden xl:block container mx-auto h-full relative cursor-pointer'>
         <div className='flex flex-col lg:flex-row h-full items-center 
@@ -111,10 +122,10 @@ const Portfolio = () => {
             <motion.div
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-            bg-accent overflow-hidden'>
-              <div className='relative'>
-              <a className='button' id='0'>
-                  <BsFillArrowRightSquareFill className='z-20 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />
+            bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='p_moda'>
+              <a>
+                  {/* <BsFillArrowRightSquareFill className='z-20 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> */}
               </a>
                 <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb1} alt=''/>
@@ -124,10 +135,10 @@ const Portfolio = () => {
             <motion.div 
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-             bg-accent overflow-hidden'>
-              <div className='relative'>
-                <a className='button' id='1'>
-                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />
+             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='p_esportiva'>
+                <a>
+                  {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> */}
                 </a>
                 <img className='w-[540px] object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb2} alt=''/>
@@ -137,42 +148,38 @@ const Portfolio = () => {
             <motion.div
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-             bg-accent overflow-hidden'>
-              <div className='relative'>
-                <div>
-                  <a className='button' id='2'>
-                    <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> 
+             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='p_ensaio'>
+                  <a>
+                    {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />  */}
                   </a>
                   <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                   hover:scale-110 transition-all duration-500 rounded' src={Thumb3} alt=''/>
-                </div>
               </div>
             </motion.div>
 
             <motion.div
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-             bg-accent overflow-hidden'>
-              <div className='relative'>
-                <a className='button' id='3'>
-                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />
+             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='p_corporativo'>
+                <a>
+                  {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> */}
                 </a>
                 <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb4} alt=''/>
               </div>
             </motion.div> 
-            
           </div>
         </div>
-
         {/* IMAGE GRIDS */}
         <div className="container mx-auto pt-30 pb-10 ">
           {/* ENSAIO CORPORATIVO */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>ensaio corporativo</h1>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>ensaio empresarial</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo2_4} />
+                <img className='img__zoom object-cover' src={Photo2_4} alt=''/>
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1_4} />
@@ -228,6 +235,8 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+        
+      
       </div>
 
       {/* No modo Mobile */}
@@ -242,7 +251,7 @@ const Portfolio = () => {
           transition={transition1}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaverHandler}
-          className='flex flex-col lg:items-start h-[732px]'
+          className='flex flex-col lg:items-start h-[732px] pb-5'
           >
               <h1 className='h1 pb-0 mt-0 xl:mt-40'>Portfólio</h1>
               <div className='pb-5 xl:pb-20'>
@@ -260,10 +269,10 @@ const Portfolio = () => {
             <motion.div
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-            bg-[#E4E8E5] overflow-hidden'>
-              <div className='relative'>
-                <a id='0'>
-                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-10 h-10 bg-white rounded-md' />
+            bg-[#E4E8E5] overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='m_moda'>
+                <a>
+                  {/* <BsFillArrowRightSquareFill className='z-20 m-2 bottom-0 right-0 absolute w-12 h-12 bg-white rounded-md' /> */}
                 </a>
                 <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb1} alt=''/>
@@ -273,10 +282,10 @@ const Portfolio = () => {
             <motion.div 
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-             bg-accent overflow-hidden'>
-              <div className='relative'>
-                <a id='1'>
-                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-10 h-10 bg-white rounded-md' />
+             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='m_esportiva'>
+                <a>
+                  {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-12 h-12 bg-white rounded-md' /> */}
                 </a>
                 <img className='w-[540px] object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb2} alt=''/>
@@ -284,14 +293,13 @@ const Portfolio = () => {
             </motion.div>
 
             <motion.div
-
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-             bg-accent overflow-hidden'>
+             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
               <div className='relative'>
-                <div>
-                  <a id='2'>
-                    <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-10 h-10 bg-white rounded-md' />
+                <div id='m_ensaio'>
+                  <a>
+                    {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-12 h-12 bg-white rounded-md' /> */}
                   </a>
                   <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                   hover:scale-110 transition-all duration-500 rounded' src={Thumb3} alt=''/>
@@ -302,10 +310,10 @@ const Portfolio = () => {
             <motion.div
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
-             bg-accent overflow-hidden'>
-              <div className='relative'>
-                <a id='3'>
-                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-10 h-10 bg-white rounded-md' />
+             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
+              <div className='relative' id='m_corporativo'>
+                <a>
+                  {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-12 h-12 bg-white rounded-md' /> */}
                 </a>
                 <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb4} alt=''/>
@@ -316,19 +324,19 @@ const Portfolio = () => {
           </div>
 
           {/* IMAGE GRIDS */}
-          <div className="container mx-auto pt-30 pb-10 ">
+          <div className="container mx-auto pt-30 pb-10 id ">
           {/* ENSAIO CORPORATIVO */}
-          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+          <div className='reveal pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>ensaio corporativo</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo2_4} />
+                <img src={Photo2_4} alt='' className='img__zoom object-cover' />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo1_4} />
+                  <img src={Photo1_4} alt=''/>
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo3_4} />
+                  <img src={Photo3_4} alt=''/>
               </div>
             </div>
           </div>
@@ -337,13 +345,13 @@ const Portfolio = () => {
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>fotografia de moda</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2} />
+                  <img className='img__zoom' src={Photo2} alt=''/>
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo1} />
+                  <img className='img__zoom' src={Photo1} alt=''/>
               </div>
               <div className="w-full rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo3} />
+                  <img className='img__zoom' src={Photo3} alt=''/>
               </div>
             </div>
           </div>
@@ -363,7 +371,7 @@ const Portfolio = () => {
             </div>
           </div>
           {/* ensaio */}
-          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+          <div className='reveal id pt-20 pb-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>ensaio fotográfico</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
@@ -377,7 +385,8 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+
         </div>
       </div>
     </motion.section>

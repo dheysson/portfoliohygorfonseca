@@ -3,6 +3,7 @@ import React, {useContext } from 'react';
 //components
 import Header from './components/Header';
 import AnimRoutes from './components/AnimRoutes';
+import Footer from './components/Footer'
 
 //router
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -22,7 +23,7 @@ const App = () => {
     <Router>
       <Header/>
       <AnimRoutes/>
-      </Router>
+    </Router>
       {/* cursor */}
       <motion.div 
       variants={cursorVariants}
