@@ -33,8 +33,7 @@ import { transition1 } from '../transitions';
 
 import { CursorContext } from '../context/CursorContext'
 
-//import icons
-import { FaChevronCircleDown } from "react-icons/fa";
+import { BsFillArrowRightSquareFill } from 'react-icons/bs'
 
 const Portfolio = () => {
   function reveal() {
@@ -84,62 +83,62 @@ const Portfolio = () => {
               </Link>
           </motion.div>
           <i class='BsFillCaretDownFill'></i>
-          {/* image grid*/}
-          <div className='grid grid-cols-2 gap-3 m-5 relative'>
+          {/* THUMBS*/}
+          <div className='grid grid-rows-2 gap-2 m-2 relative'>
             {/* image */}
             <motion.div
             whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
             bg-[#E4E8E5] overflow-hidden'>
-              <img className='w-[540px] object-top object-cover h-[220px] lg:h-[360px] 
-              hover:scale-110 transition-all duration-500 rounded' src={Thumb1} alt=''/>
+              <div className='relative'>
+                <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-5 h-5 bg-white rounded-md' />
+                <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
+                hover:scale-110 transition-all duration-500 rounded' src={Thumb1} alt=''/>
+              </div>
             </motion.div>
 
             <motion.div 
             whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
              bg-accent overflow-hidden'>
-              <img className='w-[540px] object-cover h-[220px] lg:h-[360px] 
-              hover:scale-110 transition-all duration-500 rounded' src={Thumb2} alt=''/>
+              <div className='relative'>
+                <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-5 h-5 bg-white rounded-md' />
+                <img className='w-[540px] object-cover h-[420px] lg:h-[360px] 
+                hover:scale-110 transition-all duration-500 rounded' src={Thumb2} alt=''/>
+              </div>
+            </motion.div>
+
+            <motion.div
+
+            whileHover={{opacity: '0.5'}}
+            className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
+             bg-accent overflow-hidden'>
+              <div className='relative'>
+                <div>
+                  <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-5 h-5 bg-white rounded-md' />
+
+                </div>
+                <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
+                hover:scale-110 transition-all duration-500 rounded' src={Thumb3} alt=''/>
+              </div>
             </motion.div>
 
             <motion.div
             whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
+            className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
              bg-accent overflow-hidden'>
-              <img className='w-[540px] object-top object-cover h-[220px] lg:h-[360px] 
-              hover:scale-110 transition-all duration-500 rounded' src={Thumb3} alt=''/>
-            </motion.div>
-
-            <motion.div
-            whileHover={{opacity: '0.5'}}
-            className='max-w-[540px] lg:max-w-[320px] h-[220px] lg:h-[360px]
-             bg-accent overflow-hidden'>
-              <img className='w-[540px] object-top object-cover h-[220px] lg:h-[360px] 
-              hover:scale-110 transition-all duration-500 rounded' src={Thumb4} alt=''/>
+              <div className='relative'>
+                <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-5 h-5 bg-white rounded-md' />
+                <img className='w-[540px] object-top object-cover h-[420px] lg:h-[360px] 
+                hover:scale-110 transition-all duration-500 rounded' src={Thumb4} alt=''/>
+              </div>
             </motion.div>
 
             
           </div>
 
-          {/* Desktop */}
-          <motion.div
-            animate={{translateY: ['88%','125%','88%']}}
-            transition={{ ease: "easeInOut", repeat: Infinity, repeatDelay: 0.5 }}
-            className='absolute top-[88%] left-[50%] bg-white rounded-3xl hidden xl:flex'>
-              <FaChevronCircleDown className='w-[38px] h-[38px]'/>
-          </motion.div>
-
-          {/* Mobile */}
-          <motion.div
-            animate={{translateY: ['82%','125%','82%']}}
-            transition={{ ease: "easeInOut", repeat: Infinity, repeatDelay: 0.5 }}
-            className='absolute top-[82%] bg-white rounded-3xl xl:hidden'>
-              <FaChevronCircleDown className='w-[38px] h-[38px]' />
-            </motion.div>
-        </div>
-
-        <div className="container mx-auto pt-26 pb-10 ">
+          {/* IMAGE GRIDS */}
+          <div className="container mx-auto pt-30 pb-10 ">
           {/* ENSAIO CORPORATIVO */}
           <div className='reveal pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>ensaio corporativo</h1>
@@ -201,6 +200,10 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+        </div>
+
+        
+        
       </div>
     </motion.section>
   );
