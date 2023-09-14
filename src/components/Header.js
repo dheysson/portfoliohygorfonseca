@@ -12,8 +12,8 @@ import { CursorContext } from '../context/CursorContext';
 const Header = () => {
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
-    <header className='fixed w-full px-[30px]
-    lg:pr-[100px] lg:pl-[50px] z-30 h-[100px] lg:h-[140px] flex items-center'>
+    <header className='fixed w-full px-[15px]
+    lg:pr-[100px] lg:pl-[50px] z-30 h-[65px] lg:h-[140px] flex items-center'>
       <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
         {/* {Logo} */}
         <Link

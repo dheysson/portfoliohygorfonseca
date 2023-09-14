@@ -52,7 +52,7 @@ const Home = () => {
             animate={{scale: 1}}
             exit={{scale: 0}}
             transition={transition1}
-            className='relative lg:-right-14 xl:overflow-hidden'
+            className='absolute xl:relative lg:-right-14 xl:overflow-hidden'
             >
               <motion.img
               whileHover={{ scale: 1.1 }}
