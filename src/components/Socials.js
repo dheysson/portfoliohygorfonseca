@@ -16,15 +16,15 @@ const Socials = () => {
     onMouseLeave={mouseLeaverHandler}
     className='hidden xl:flex ml-24'
     >
-      <ul className='flex gap-x-4'>
+      <ul className='flex gap-x-10'>
         <li>
           <a href='https://www.instagram.com/ph.hygorfonseca/' target='_blank'>
-          <ImInstagram />
+          <ImInstagram className='w-[22px] h-[22px]' />
           </a>
         </li>
         <li>
           <a href='https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5569999505421%26text%3DOl%25C3%25A1%252C%2Bvim%2Bpelo%2Binsta.&e=AT05H_r3DuEEcZf4C6bzRxAskTd4sXoXWOCqcJGu_44fjzguaDsnQ1XKm7Qt5MLJUEqWUnw9HFJpZSb5XnZiyM6rLctK82f2RywF1PiSEL0bJu32folz0w' target='_blank'>
-          <ImWhatsapp />
+          <ImWhatsapp className='w-[22px] h-[22px]'/>
           </a>
         </li>
       </ul>

@@ -50,7 +50,7 @@ const About = () => {
                   fotografia, comecei a investir.<b> Fotografar é o que amo e quero viver</b>.
                 <br/>
                 <br/>
-                Eu me impressiono com a arte da fotografia e o benefício que nos traz, como a autoestima!
+                Me impressiono com a arte da fotografia e o benefício que nos traz, como a autoestima!
                 
               </p>
               <Link to={'/portfolio'} className='btn'>Veja meu trabalho</Link>

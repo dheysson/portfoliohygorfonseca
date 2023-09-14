@@ -13,14 +13,14 @@ const Header = () => {
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
     <header className='fixed w-full px-[30px]
-    lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center'>
+    lg:pr-[100px] lg:pl-[50px] z-30 h-[100px] lg:h-[140px] flex items-center'>
       <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
         {/* {Logo} */}
         <Link
         onMouseEnter={mouseEnterHandler}
         onMouseLeave={mouseLeaverHandler}
-        to={'/'} className='max-w-[280px]'>
-          <img alt='' src={Logo}/>
+        to={'/'} className='max-w-[220px] xl:max-w-[280px]'>
+          <img alt='' src={Logo} />
         </Link>
         {/* {nav inicialmente oculto - aparece no modo desktop} */}
         <nav
@@ -34,7 +34,7 @@ const Header = () => {
         </nav>
       </div>
       {/* Socials */}
-      <Socials/>
+      {/* <Socials/> */}
       {/* mobileNav */}
       <MobileNav/>
     </header>
