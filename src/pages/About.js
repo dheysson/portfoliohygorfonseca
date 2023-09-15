@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 
-import Photographer from '../img/about/photographer.jpg';
+import Photographer from '../img/about/photographer.webp';
 
 import { Link } from 'react-router-dom';
 
@@ -40,7 +40,7 @@ const About = () => {
             className='flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center
             items-center lg:items-start'
              >
-              <h1 className='h1_v1 pt-36'>Sobre mim</h1>
+              <h1 className='h1_v1 pt-32'>Sobre mim</h1>
               <p className='mb-12 max-w-sm'>
                   Comecei <b>minha carreira em fotografia </b>amadora colecionando momentos apenas com o 
                   aparelho celular desde 2020 e depois no final do ano de 2022 e começo de 2023

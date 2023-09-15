@@ -1,28 +1,30 @@
 import React, {useContext} from 'react';
 
+
+// ensaio corporativo
+import Thumb4 from '../img/portfolio/branding/thumb.webp'
+import Photo1_4 from '../img/portfolio/branding/photo (1).webp'
+import Photo2_4 from '../img/portfolio/branding/photo (2).webp'
+import Photo3_4 from '../img/portfolio/branding/photo (3).jpg'
+
 // ensaio para marca
-import Thumb1 from '../img/portfolio/ensaiomarca/thumb.jpg'
-import Photo1 from '../img/portfolio/ensaiomarca/photo (1).jpg'
-import Photo2 from '../img/portfolio/ensaiomarca/photo (2).jpg'
+import Thumb1 from '../img/portfolio/ensaiomarca/thumb.webp'
+import Photo1 from '../img/portfolio/ensaiomarca/photo (1).webp'
+import Photo2 from '../img/portfolio/ensaiomarca/photo (2).webp'
 import Photo3 from '../img/portfolio/ensaiomarca/photo (3).jpg'
 
 // fotos esportivas
-import Thumb2 from '../img/portfolio/esportiva/thumb.jpg'
-import Photo1_2 from '../img/portfolio/esportiva/photo (1).jpg'
-import Photo2_2 from '../img/portfolio/esportiva/photo (2).jpg'
+import Thumb2 from '../img/portfolio/esportiva/thumb.webp'
+import Photo1_2 from '../img/portfolio/esportiva/photo (1).webp'
+import Photo2_2 from '../img/portfolio/esportiva/photo (2).webp'
 import Photo3_2 from '../img/portfolio/esportiva/photo (3).jpg'
 
 // ensaio normal
-import Thumb3 from '../img/portfolio/ensaio/thumb.jpg'
-import Photo1_3 from '../img/portfolio/ensaio/photo (1).jpeg'
-import Photo2_3 from '../img/portfolio/ensaio/photo (2).jpg'
+import Thumb3 from '../img/portfolio/ensaio/thumb.webp'
+import Photo1_3 from '../img/portfolio/ensaio/photo (1).webp'
+import Photo2_3 from '../img/portfolio/ensaio/photo (2).webp'
 import Photo3_3 from '../img/portfolio/ensaio/photo (3).jpg'
 
-// ensaio corporativo
-import Thumb4 from '../img/portfolio/branding/thumb.jpg'
-import Photo1_4 from '../img/portfolio/branding/photo (1).jpg'
-import Photo2_4 from '../img/portfolio/branding/photo (2).jpeg'
-import Photo3_4 from '../img/portfolio/branding/photo (3).jpg'
 
 import { Link } from 'react-router-dom';
 
@@ -179,13 +181,13 @@ const Portfolio = () => {
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>branding</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
-                <img className='img__zoom object-cover' src={Photo2_4} alt=''/>
+                <img className='img__zoom object-cover' src={Photo1_4} alt=''/>
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo1_4} />
+                  <img className='img__zoom' src={Photo3_4} />
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo3_4} />
+                  <img className='img__zoom object-cover' src={Photo2_4} />
               </div>
             </div>
           </div>
@@ -194,13 +196,13 @@ const Portfolio = () => {
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>fotografia de moda</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2} />
-              </div>
-              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1} />
               </div>
-              <div className="w-full rounded overflow-hidden">
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img className='img__zoom' src={Photo3} />
+              </div>
+              <div className="w-full rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo2} />
               </div>
             </div>
           </div>
@@ -212,10 +214,10 @@ const Portfolio = () => {
                   <img className='img__zoom object-cover' src={Photo1_2} />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2_2} />
+                  <img className='img__zoom' src={Photo3_2} />
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo3_2} />
+                  <img className='img__zoom object-cover' src={Photo2_2} />
               </div>
             </div>
           </div>
