@@ -25,20 +25,20 @@ const Home = () => {
     className='section xl:overflow-hidden'
     >
       {/* Mobile */}
-      <div className='block xl:hidden container mx-auto h-full relative overflow-hidden'>
+      <div className='block xl:hidden container mx-auto h-full relative'>
         {/* image */}
-        <div className='absolute pt-14'>
+        <div className='absolute pt-40 h-full'>
             <motion.div
             initial={{scale: 0}}
             animate={{scale: 1}}
             exit={{scale: 0}}
             transition={transition1}
-            className='lg:-right-14'
+            className=''
             >
               <motion.img
-              whileHover={{ scale: [1.25,1.5] }}
+              whileHover={{ scale: [1.5,1.65] }}
               transition={transition1}
-              src={PhotographerExt} alt='' className='scale-125'/>
+              src={PhotographerExt} alt='' className='scale-150'/>
             </motion.div>            
           </div>
         {/* text and img wrapper */}
