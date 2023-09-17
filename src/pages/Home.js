@@ -27,7 +27,7 @@ const Home = () => {
       {/* Mobile */}
       <div className='block xl:hidden container mx-auto h-full relative'>
         {/* image */}
-        <div className='absolute pt-40 h-full'>
+        <div className='absolute pt-40 h-full overflow-hidden'>
             <motion.div
             initial={{scale: 0}}
             animate={{scale: 1}}
@@ -38,7 +38,7 @@ const Home = () => {
               <motion.img
               whileHover={{ scale: [1.5,1.65] }}
               transition={transition1}
-              
+
               src={PhotographerExt} alt='' className='scale-150'/>
             </motion.div>            
           </div>
