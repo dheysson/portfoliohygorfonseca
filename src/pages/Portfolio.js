@@ -329,52 +329,52 @@ const Portfolio = () => {
           <div className="container mx-auto pt-30 pb-10 id ">
           {/* ENSAIO CORPORATIVO */}
           <div className='reveal pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 text-left'>branding</h1>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>branding</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
-                <img src={Photo2_4} alt='' className='img__zoom object-cover' />
+                <img src={Photo1_4} alt='' className='img__zoom object-cover' />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img src={Photo1_4} alt=''/>
+                  <img src={Photo3_4} alt=''/>
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img src={Photo3_4} alt=''/>
+                  <img src={Photo2_4} alt=''/>
               </div>
             </div>
           </div>
           {/* fotografia de moda */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 text-left'>fotografia de moda</h1>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>fotografia de moda</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2} alt=''/>
-              </div>
-              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1} alt=''/>
               </div>
-              <div className="w-full rounded overflow-hidden">
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img className='img__zoom' src={Photo3} alt=''/>
+              </div>
+              <div className="w-full rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo2} alt=''/>
               </div>
             </div>
           </div>
           {/* esportiva */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 text-left'>fotografia esportiva</h1>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>fotografia esportiva</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                   <img className='img__zoom object-cover' src={Photo1_2} />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2_2} />
+                  <img className='img__zoom' src={Photo3_2} />
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo3_2} />
+                  <img className='img__zoom object-cover' src={Photo2_2} />
               </div>
             </div>
           </div>
           {/* ensaio */}
           <div className='reveal id pt-20 pb-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 text-left'>ensaio fotográfico</h1>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio fotográfico</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1_3} />

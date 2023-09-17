@@ -13,7 +13,7 @@ const Header = () => {
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
 
   return (
-    <header className='fixed w-full px-[15px] bg-white xl:bg-[#ffffff00]
+    <header className='fixed w-full px-[15px]
     lg:pr-[100px] lg:pl-[50px] z-30 h-[65px] lg:h-[140px] flex items-center'>
       <div className='flex flex-col lg:flex-row lg:items-center w-full justify-between'>
         {/* {Logo} */}

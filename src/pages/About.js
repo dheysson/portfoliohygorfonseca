@@ -18,7 +18,7 @@ const About = () => {
       animate={{opacity: 1, y: 0}}
       exit={{opacity: 0, y: '-50%'}}
       transition={transition1}
-      className='section'
+      className='section h-full'
       >
         <div 
         onMouseEnter={mouseEnterHandler}
@@ -37,10 +37,10 @@ const About = () => {
             animate={{opacity: 1, y: 0}}
             exit={{opacity: 0, y: '-80%'}}
             transition={transition1}
-            className='flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center
+            className='flex-1 pt-20 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center
             items-center lg:items-start'
              >
-              <h1 className='h1_v1 pt-32'>Sobre mim</h1>
+              <h1 className='h1_v1'>Sobre mim</h1>
               <p className='mb-12 max-w-sm'>
                   Comecei <b>minha carreira em fotografia </b>amadora colecionando momentos apenas com o 
                   aparelho celular desde 2020 e depois no final do ano de 2022 e começo de 2023
