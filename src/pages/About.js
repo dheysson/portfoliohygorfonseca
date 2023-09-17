@@ -26,7 +26,7 @@ const About = () => {
         className='container mx-auto h-full relative'>
           {/* text and image wrapper */}
           <div className='flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 
-          text-center lg:text-left lg:pt-16'>
+          text-center lg:text-left lg:pt-16 xl:pt-36'>
             {/* image */}
             <div className='flex-1 max-h-96 lg:max-h-max order-2 lg:order-none'>
               <img src={Photographer} alt=''/>
