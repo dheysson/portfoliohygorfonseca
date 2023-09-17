@@ -38,6 +38,7 @@ const Home = () => {
               <motion.img
               whileHover={{ scale: [1.5,1.65] }}
               transition={transition1}
+              
               src={PhotographerExt} alt='' className='scale-150'/>
             </motion.div>            
           </div>
