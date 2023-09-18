@@ -52,17 +52,15 @@ const Home = () => {
             transition={transition1}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaverHandler}
-            className='w-[340px] h-[240px] lg:pt-10 lg:pb-10
-            lg:w-auto z-10 lg:absolute flex flex-col items-center justify-center lg:items-start xl:h-[640px] 
-             backdrop-blur-[4px] bg-[#ffffffc0] rounded-md'
+            className='w-auto h-auto p-8
+            z-10 flex flex-col items-center justify-center backdrop-blur-[4px] bg-[#ffffff8f] rounded-md'
           >
             <h1 className='h1 text-[#181818]'>fotógrafo</h1>
-            <p className='text-[26px] text-[#000000] lg:text-[36px] font-primary mb-4 lg:mb-12'>
+            <p className='text-[26px] text-[#000000] font-primary mb-4'>
               Espigão D'Oeste, RO
             </p>
             <Link to={'/portfolio'} className='btn'>Surpreenda-se</Link>  
           </motion.div>
-
         </div>
           
       </div>
@@ -79,14 +77,16 @@ const Home = () => {
             transition={transition1}
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaverHandler}
-            className='absolute w-[400px] lg:pt-10 lg:pb-10 bottom-[20px]
-            lg:w-auto z-10 lg:absolute flex flex-col items-center lg:items-start xl:h-[640px]'
+            className='absolute h-full bottom-[20px]
+            lg:w-auto z-10 flex flex-col justify-center items-center'
           >
-            <h1 className='h1'>fotógrafo</h1>
-            <p className='text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12'>
-              Espigão D'Oeste, RO
-            </p>
-            <Link to={'/portfolio'} className='btn mb-[30px]'>Surpreenda-se</Link>  
+            <div className='flex flex-col h-[275px] justify-between'>
+              <h1 className='h1 mb-0'>fotógrafo</h1>
+              <p className='text-[26px] lg:text-[36px] font-primary'>
+                Espigão D'Oeste, RO
+              </p>
+            <Link to={'/portfolio'} className='btn w-[240px]'>Surpreenda-se</Link>  
+            </div>
           </motion.div>
 
           {/* image */}

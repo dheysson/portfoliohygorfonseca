@@ -111,7 +111,7 @@ const Portfolio = () => {
               <h1 className='h1 pb-0 mt-0 xl:mt-40'>Portfólio</h1>
               <div className='pb-5 xl:pb-20'>
                 <a className='text-[20px]'>Para saber mais sobre mim, </a>
-                <a className='underline' href='/about'>clique aqui!</a>
+                <a className='underline text-[20px]' href='/about'>clique aqui!</a>
               </div>
               <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-0'>
                   Contate-me
@@ -258,7 +258,7 @@ const Portfolio = () => {
               <h1 className='h1 pb-0 mt-0 xl:mt-40'>Portfólio</h1>
               <div className='pb-5 xl:pb-20'>
                 <a className='text-[20px]'>Para saber mais sobre mim, </a>
-                <a className='underline' href='/about'>clique aqui!</a>
+                <a className='underline text-[20px]' href='/about'>clique aqui!</a>
               </div>
               <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-0'>
                   Contate-me
@@ -336,7 +336,7 @@ const Portfolio = () => {
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img src={Photo3_4} alt=''/>
-              </div>
+              </div>''
               <div className="w-full rounded overflow-hidden flex">
                   <img src={Photo2_4} alt=''/>
               </div>
@@ -362,13 +362,13 @@ const Portfolio = () => {
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>fotografia esportiva</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo1_2} />
+                  <img className='img__zoom object-cover' src={Photo1_2} alt='' />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo3_2} />
+                  <img className='img__zoom' src={Photo3_2} alt=''/>
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo2_2} />
+                  <img className='img__zoom object-cover' src={Photo2_2} alt=''/>
               </div>
             </div>
           </div>
@@ -377,13 +377,13 @@ const Portfolio = () => {
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio fotográfico</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo1_3} />
+                  <img className='img__zoom' src={Photo1_3} alt='' />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo3_3} />
+                  <img className='img__zoom' src={Photo3_3} alt=''/>
               </div>
               <div className="w-full rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2_3} />
+                  <img className='img__zoom' src={Photo2_3} alt=''/>
               </div>
             </div>
           </div>

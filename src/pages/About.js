@@ -41,14 +41,13 @@ const About = () => {
             items-center lg:items-start'
              >
               <h1 className='h1_v1'>Sobre mim</h1>
-              <p className='mb-12 max-w-sm'>
-                  Comecei <b>minha carreira em fotografia </b>amadora colecionando momentos apenas com o 
-                  aparelho celular desde 2020 e depois no final do ano de 2022 e começo de 2023
-                  vendo a necessidade de um equipamento de qualidade para me profissionalizar em
+              <p className='mb-12 max-w-sm text-justify'>
+                  Comecei <b>minha carreira em fotografia </b>amadora em 2020, colecionando momentos apenas com o 
+                  aparelho celular. No final de 2022, vendo a necessidade de um equipamento de qualidade para me profissionalizar em
                   fotografia, comecei a investir.<b> Fotografar é o que amo e quero viver</b>.
                 <br/>
                 <br/>
-                Me impressiono com a arte da fotografia e o benefício que nos traz, como a autoestima!
+                Me impressiono com a <b>arte da fotografia</b> e o benefício que nos traz, como a autoestima!
                 
               </p>
               <Link to={'/portfolio'} className='btn'>Clique aqui e veja meu trabalho</Link>
