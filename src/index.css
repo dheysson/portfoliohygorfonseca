@@ -50,7 +50,6 @@
     @apply rounded-md py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-white text-black;
   }
 
-
   * {
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
     -webkit-touch-callout: none; /* iOS Safari */

@@ -37,6 +37,7 @@ import { CursorContext } from '../context/CursorContext'
 // import { BsFillArrowRightSquareFill } from 'react-icons/bs'
 
 const Portfolio = () => {
+  // animação vertical dos elementos ao descer página
   function reveal() {
     var reveals = document.querySelectorAll(".reveal")
     for (var i = 0; i < reveals.length; i++) {
@@ -50,9 +51,9 @@ const Portfolio = () => {
       }
     }
   }
-
   window.addEventListener("scroll", reveal);
 
+  // Selecionar e ir até a categoria de fotografia
   function log(ev){
     var item = (ev.target.parentNode.getAttribute('id'));
     console.log(item)
@@ -85,6 +86,61 @@ const Portfolio = () => {
           break;
     }
   }
+
+  function changeNav() {
+    let bodyHeight = document.body.getBoundingClientRect().bottom;
+    let nav = document.querySelector('nav');
+    let logo = document.querySelector('.logo');
+    let navWrapper = document.querySelector('header').firstChild;
+    let header = document.querySelector('header');
+
+    // ao scrollar para baixo
+    if(bodyHeight < 860) {
+      nav.classList.add("xl:pt-14");
+
+      // navbar de linha para coluna
+      nav.classList.add("xl:flex-col");
+      nav.classList.remove("xl:flex-row");
+
+      //esconder logo
+      logo.classList.add("xl:hidden");
+
+      // mover navbar para esquerda
+      navWrapper.classList.add("xl:justify-end")
+      navWrapper.classList.remove("xl:justify-between")
+
+      // aumentar altura do Header para que seja possivel ver todos elementos da navbar vertical
+      header.classList.remove("xl:h-[140px]")
+      header.classList.add("xl:h-[260px]")
+
+      header.classList.remove("lg:pr-[100px]");
+      header.classList.add("lg:pr-[35px]");
+    } 
+    // ao scrollar para o topo novamente
+      else if(bodyHeight > 920) {
+        //navbar de coluna para linha
+        nav.classList.remove("xl:flex-col");
+        nav.classList.add("xl:flex-row");
+
+        //exibir logo
+        logo.classList.remove("xl:hidden");
+
+        // restaurar posição inicial da navbar
+        navWrapper.classList.remove("xl:justify-end");
+        navWrapper.classList.add("xl:justify-between");
+
+        //restaurar altura inicial do Header
+        header.classList.remove("xl:h-[260px]")
+        header.classList.add("xl:h-[140px]")
+
+        header.classList.remove("lg:pr-[35px]");
+        header.classList.add("lg:pr-[100px]");
+    }
+  }
+  window.addEventListener("scroll", changeNav)
+
+  //verificar se a navbar está acima dos elementos ao recarregar pagina
+  window.addEventListener('load', changeNav)
 
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
@@ -336,7 +392,7 @@ const Portfolio = () => {
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
                   <img src={Photo3_4} alt=''/>
-              </div>''
+              </div>
               <div className="w-full rounded overflow-hidden flex">
                   <img src={Photo2_4} alt=''/>
               </div>
