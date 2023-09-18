@@ -95,9 +95,9 @@ const Portfolio = () => {
     let header = document.querySelector('header');
 
     // ao scrollar para baixo
-    if(bodyHeight < 860) {
-      nav.classList.add("xl:pt-14");
-
+    if(bodyHeight < 880) {
+      nav.classList.add("xl:pt-40");
+      nav.classList.remove("xl:pt-0");
       // navbar de linha para coluna
       nav.classList.add("xl:flex-col");
       nav.classList.remove("xl:flex-row");
@@ -118,6 +118,8 @@ const Portfolio = () => {
     } 
     // ao scrollar para o topo novamente
       else if(bodyHeight > 920) {
+        nav.classList.remove("xl:pt-40");
+        nav.classList.add("xl:pt-0");
         //navbar de coluna para linha
         nav.classList.remove("xl:flex-col");
         nav.classList.add("xl:flex-row");
@@ -149,11 +151,12 @@ const Portfolio = () => {
       animate={{opacity: 1, y: 0}}
       exit={{opacity: 0, y: '100%'}}
       transition={transition1}
-      className='section'>
+      className='section flex items-center justify-center'>
+
       {/* No modo Desktop */}
-      <div className='hidden xl:block container mx-auto h-full relative cursor-pointer'>
+      <div className='hidden xl:block container max-w-max mx-auto h-full w-full relative cursor-pointer xl:ml-0 xl:mr-0'>
         <div className='flex flex-col lg:flex-row h-full items-center 
-        justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
+        justify-center gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
           {/* text */}
           <motion.div
           initial={{ opacity: 0, y: '-50%' }}
@@ -231,7 +234,7 @@ const Portfolio = () => {
           </div>
         </div>
         {/* IMAGE GRIDS */}
-        <div className="container mx-auto pt-30 pb-10 ">
+        <div className="container max-w-max w-[1600px] mx-auto pt-30 pb-10">
           {/* ENSAIO CORPORATIVO */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>branding</h1>
@@ -293,8 +296,6 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        
-      
       </div>
 
       {/* No modo Mobile */}
