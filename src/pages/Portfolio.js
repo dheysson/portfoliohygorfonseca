@@ -26,14 +26,14 @@ import Photo2_3 from '../img/portfolio/ensaio/photo (2).webp'
 import Photo3_3 from '../img/portfolio/ensaio/photo (3).jpg'
 
 // miscelanea
-import m_photo_1 from '../img/portfolio/miscelanea/m_photo_1.jpg';
-import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.jpg';
-import m_photo_3 from '../img/portfolio/miscelanea/m_photo_3.jpg';
-import m_photo_4 from '../img/portfolio/miscelanea/m_photo_4.jpg';
-import m_photo_5 from '../img/portfolio/miscelanea/m_photo_5.jpg';
-import m_photo_6 from '../img/portfolio/miscelanea/m_photo_6.jpg';
-import m_photo_7 from '../img/portfolio/miscelanea/m_photo_7.jpg';
-import m_photo_8 from '../img/portfolio/miscelanea/m_photo_8.jpg';
+import m_photo_1 from '../img/portfolio/miscelanea/m_photo_1.webp';
+import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.webp';
+import m_photo_3 from '../img/portfolio/miscelanea/m_photo_3.webp';
+import m_photo_4 from '../img/portfolio/miscelanea/m_photo_4.webp';
+import m_photo_5 from '../img/portfolio/miscelanea/m_photo_5.webp';
+import m_photo_6 from '../img/portfolio/miscelanea/m_photo_6.webp';
+import m_photo_7 from '../img/portfolio/miscelanea/m_photo_7.webp';
+import m_photo_8 from '../img/portfolio/miscelanea/m_photo_8.webp';
 import m_photo_9 from '../img/portfolio/miscelanea/m_photo_9.webp';
 import m_photo_10 from '../img/portfolio/miscelanea/m_photo_10.webp';
 import m_photo_11 from '../img/portfolio/miscelanea/m_photo_11.webp';
