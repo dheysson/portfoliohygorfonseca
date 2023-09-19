@@ -15,6 +15,9 @@ import { motion } from 'framer-motion';
 
 import { CursorContext } from './context/CursorContext';
 
+
+
+
 const App = () => {
   // console.log(useContext(CursorContext));
   const {cursorVariants, cursorBG} = useContext(CursorContext)
@@ -23,6 +26,7 @@ const App = () => {
     <Router>
       <Header/>
       <AnimRoutes/>
+      {/*    */}
     </Router>
       {/* cursor */}
       <motion.div 

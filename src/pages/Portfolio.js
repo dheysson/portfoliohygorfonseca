@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 
 
 // ensaio corporativo
@@ -25,6 +25,23 @@ import Photo1_3 from '../img/portfolio/ensaio/photo (1).webp'
 import Photo2_3 from '../img/portfolio/ensaio/photo (2).webp'
 import Photo3_3 from '../img/portfolio/ensaio/photo (3).jpg'
 
+// miscelanea
+import m_photo_1 from '../img/portfolio/miscelanea/m_photo_1.jpg';
+import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.jpg';
+import m_photo_3 from '../img/portfolio/miscelanea/m_photo_3.jpg';
+import m_photo_4 from '../img/portfolio/miscelanea/m_photo_4.jpg';
+import m_photo_5 from '../img/portfolio/miscelanea/m_photo_5.jpg';
+import m_photo_6 from '../img/portfolio/miscelanea/m_photo_6.jpg';
+import m_photo_7 from '../img/portfolio/miscelanea/m_photo_7.jpg';
+import m_photo_8 from '../img/portfolio/miscelanea/m_photo_8.jpg';
+import m_photo_9 from '../img/portfolio/miscelanea/m_photo_9.webp';
+import m_photo_10 from '../img/portfolio/miscelanea/m_photo_10.webp';
+import m_photo_11 from '../img/portfolio/miscelanea/m_photo_11.webp';
+import m_photo_12 from '../img/portfolio/miscelanea/m_photo_12.webp';
+import m_photo_13 from '../img/portfolio/miscelanea/m_photo_13.webp';
+import m_photo_14 from '../img/portfolio/miscelanea/m_photo_14.webp';
+import m_photo_15  from '../img/portfolio/miscelanea/m_photo_15.webp';
+import m_photo_16  from '../img/portfolio/miscelanea/m_photo_16.webp';
 
 import { Link } from 'react-router-dom';
 
@@ -33,6 +50,8 @@ import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
 
 import { CursorContext } from '../context/CursorContext'
+
+import { goTop } from '../scripts/goTop'
 
 // import { BsFillArrowRightSquareFill } from 'react-icons/bs'
 
@@ -55,47 +74,22 @@ const Portfolio = () => {
 
   // Selecionar e ir até a categoria de fotografia
   function log(ev){
-    var item = (ev.target.parentNode.getAttribute('id'));
+    var item = parseInt(ev.target.parentNode.getAttribute('id'));
     console.log(item)
-    var grids = document.querySelectorAll('.id');
-    switch(item) {
-      case 'p_moda':
-        window.scrollTo(0, 2200)
-        break;
-      case 'p_esportiva':
-        window.scrollTo(0, 3350)
-        break;
-      case 'p_ensaio':
-        window.scrollTo(0, 4575)
-        break;
-      case 'p_corporativo':
-        window.scrollTo(0, 1050)
-        break;
-
-        case 'm_moda':
-          window.scrollTo(0, 2500)
-          break;
-        case 'm_esportiva':
-          window.scrollTo(0, 3000)
-          break;
-        case 'm_ensaio':
-          window.scrollTo(0, document.body.scrollHeight);
-          break;
-        case 'm_corporativo':
-          window.scrollTo(0, 2000)
-          break;
-    }
+    document.querySelectorAll('.id')[item].scrollIntoView({behavior: 'smooth'});
   }
 
   function changeNav() {
     let bodyHeight = document.body.getBoundingClientRect().bottom;
     let nav = document.querySelector('nav');
     let logo = document.querySelector('.logo');
-    let navWrapper = document.querySelector('header').firstChild;
     let header = document.querySelector('header');
+    let navWrapper = document.querySelector('header').firstChild;
 
+    console.log(bodyHeight)
+  
     // ao scrollar para baixo
-    if(bodyHeight < 880) {
+    if(bodyHeight < 11890) {
       nav.classList.add("xl:pt-40");
       nav.classList.remove("xl:pt-0");
       // navbar de linha para coluna
@@ -117,7 +111,7 @@ const Portfolio = () => {
       header.classList.add("lg:pr-[35px]");
     } 
     // ao scrollar para o topo novamente
-      else if(bodyHeight > 920) {
+      else if(bodyHeight > 11890) {
         nav.classList.remove("xl:pt-40");
         nav.classList.add("xl:pt-0");
         //navbar de coluna para linha
@@ -144,6 +138,7 @@ const Portfolio = () => {
   //verificar se a navbar está acima dos elementos ao recarregar pagina
   window.addEventListener('load', changeNav)
 
+
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
     <motion.section 
@@ -151,7 +146,7 @@ const Portfolio = () => {
       animate={{opacity: 1, y: 0}}
       exit={{opacity: 0, y: '100%'}}
       transition={transition1}
-      className='section flex items-center justify-center'>
+      className='section flex items-center justify-center h-full'>
 
       {/* No modo Desktop */}
       <div className='hidden xl:block container max-w-max mx-auto h-full w-full relative cursor-pointer xl:ml-0 xl:mr-0'>
@@ -184,7 +179,7 @@ const Portfolio = () => {
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
             bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
-              <div className='relative' id='p_moda'>
+              <div className='relative' id='0'>
               <a>
                   {/* <BsFillArrowRightSquareFill className='z-20 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> */}
               </a>
@@ -197,7 +192,7 @@ const Portfolio = () => {
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
              bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
-              <div className='relative' id='p_esportiva'>
+              <div className='relative' id='1'>
                 <a>
                   {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> */}
                 </a>
@@ -210,7 +205,7 @@ const Portfolio = () => {
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
              bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
-              <div className='relative' id='p_ensaio'>
+              <div className='relative' id='2'>
                   <a>
                     {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' />  */}
                   </a>
@@ -223,7 +218,7 @@ const Portfolio = () => {
             whileHover={{opacity: '0.5'}}
             className='max-w-[540px] lg:max-w-[320px] h-[420px] lg:h-[360px]
              bg-accent overflow-hidden' onClick={(ev)=>{ log(ev) }}>
-              <div className='relative' id='p_corporativo'>
+              <div className='relative' id='3'>
                 <a>
                   {/* <BsFillArrowRightSquareFill className='z-10 m-2 bottom-0 right-0 absolute w-8 h-8 bg-white rounded-md' /> */}
                 </a>
@@ -234,22 +229,7 @@ const Portfolio = () => {
           </div>
         </div>
         {/* IMAGE GRIDS */}
-        <div className="container max-w-max w-[1600px] mx-auto pt-30 pb-10">
-          {/* ENSAIO CORPORATIVO */}
-          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>branding</h1>
-            <div className="title_grid">
-              <div className="w-full rounded overflow-hidden flex">
-                <img className='img__zoom object-cover' src={Photo1_4} alt=''/>
-              </div>
-              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo3_4} />
-              </div>
-              <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo2_4} />
-              </div>
-            </div>
-          </div>
+        <div className="container max-w-max w-[1500px] mx-auto pt-30 pb-10">
           {/* fotografia de moda */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>fotografia de moda</h1>
@@ -279,7 +259,7 @@ const Portfolio = () => {
                   <img className='img__zoom object-cover' src={Photo2_2} />
               </div>
             </div>
-          </div>
+          </div>      
           {/* ensaio */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>ensaio fotográfico</h1>
@@ -295,7 +275,81 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
+          {/* ENSAIO CORPORATIVO */}
+          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>branding</h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo1_4} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_4} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo2_4} />
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Miscelanea */}
+        <div className='container pt-20 pb-20 max-w-[1500px] flex flex-col justify-center items-center'>
+          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 w-[100%]'>Miscelânea</h1>
+          <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[100%]'>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_1} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_4} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_2} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_3} alt=''/>
+            </div>
+            
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_6} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_5} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_8} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_7} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_9} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_11} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_10} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_12} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_13} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_15} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_14} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_16} alt=''/>
+            </div>
+          </div>
+
+          <button onClick={goTop} className='btn mt-20'>VOLTAR PARA O TOPO</button>
+        </div>
+
       </div>
 
       {/* No modo Mobile */}
@@ -310,7 +364,7 @@ const Portfolio = () => {
           transition={transition1}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaverHandler}
-          className='flex flex-col lg:items-start h-[732px] pb-5'
+          className='flex flex-col lg:items-start h-auto pb-5'
           >
               <h1 className='h1 pb-0 mt-0 xl:mt-40'>Portfólio</h1>
               <div className='pb-5 xl:pb-20'>
@@ -446,6 +500,61 @@ const Portfolio = () => {
           </div>
           </div>
 
+          {/* Miscelanea */}
+        <div className='container pt-20 pb-20 max-w-max flex flex-col justify-center items-center'>
+          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 self-start'>miscelânea</h1>
+          <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[90%]'>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_1} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_4} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_2} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_3} alt=''/>
+            </div>
+            
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_6} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_5} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_8} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_7} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_9} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_11} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_10} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_12} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_13} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_15} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex row-span-2'>
+              <img className='img__zoom object-cover' src={m_photo_14} alt=''/>
+            </div>
+            <div className='rounded overflow-hidden flex'>
+              <img className='img__zoom object-cover' src={m_photo_16} alt=''/>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </motion.section>
