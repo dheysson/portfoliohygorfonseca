@@ -25,9 +25,14 @@ import Photo1_3 from '../img/portfolio/ensaio/photo (1).webp'
 import Photo2_3 from '../img/portfolio/ensaio/photo (2).webp'
 import Photo3_3 from '../img/portfolio/ensaio/photo (3).jpg'
 
+//outdoor
+import Photo1_5 from '../img/portfolio/outdoor/photo (1).JPG'
+import Photo2_5 from '../img/portfolio/outdoor/photo (2).JPG'
+import Photo3_5 from '../img/portfolio/outdoor/photo (3).JPG'
+
 // miscelanea
 import m_photo_1 from '../img/portfolio/miscelanea/m_photo_1.webp';
-import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.webp';
+import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.jpg';
 import m_photo_3 from '../img/portfolio/miscelanea/m_photo_3.webp';
 import m_photo_4 from '../img/portfolio/miscelanea/m_photo_4.webp';
 import m_photo_5 from '../img/portfolio/miscelanea/m_photo_5.webp';
@@ -277,7 +282,7 @@ const Portfolio = () => {
           </div>
           {/* ENSAIO CORPORATIVO */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>branding</h1>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>fotografia publicitária</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                 <img className='img__zoom object-cover' src={Photo1_4} alt=''/>
@@ -290,11 +295,26 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
+          {/* fotografia outdoor */}
+          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>fotografia <i>outdoor</i></h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_5} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_5} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_5} />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Miscelanea */}
         <div className='container pt-20 pb-20 max-w-[1500px] flex flex-col justify-center items-center'>
-          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 w-[100%]'>Miscelânea</h1>
+          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 w-[100%]'>miscelânea</h1>
           <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[100%]'>
             <div className='rounded overflow-hidden flex row-span-2'>
               <img className='img__zoom object-cover' src={m_photo_1} alt=''/>
@@ -349,7 +369,6 @@ const Portfolio = () => {
 
           <button onClick={goTop} className='btn mt-20'>VOLTAR PARA O TOPO</button>
         </div>
-
       </div>
 
       {/* No modo Mobile */}
@@ -439,7 +458,7 @@ const Portfolio = () => {
           {/* IMAGE GRIDS */}
           <div className="container mx-auto pt-30 pb-10 id ">
           {/* ENSAIO CORPORATIVO */}
-          <div className='reveal pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+          <div className='reveal pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>branding</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
@@ -454,7 +473,7 @@ const Portfolio = () => {
             </div>
           </div>
           {/* fotografia de moda */}
-          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>fotografia de moda</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
@@ -469,7 +488,7 @@ const Portfolio = () => {
             </div>
           </div>
           {/* esportiva */}
-          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>fotografia esportiva</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
@@ -484,7 +503,7 @@ const Portfolio = () => {
             </div>
           </div>
           {/* ensaio */}
-          <div className='reveal id pt-20 pb-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio fotográfico</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
@@ -498,10 +517,25 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
+          {/* fotografia outdoor */}
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-5'>fotografia <i>outdoor</i></h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_5} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_5} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_5} />
+              </div>
+            </div>
           </div>
+        </div>
 
           {/* Miscelanea */}
-        <div className='container pt-20 pb-20 max-w-max flex flex-col justify-center items-center'>
+        <div className='container pt-12 pb-12 max-w-max flex flex-col justify-center items-center'>
           <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 self-start'>miscelânea</h1>
           <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[90%]'>
             <div className='rounded overflow-hidden flex row-span-2'>
@@ -553,10 +587,13 @@ const Portfolio = () => {
             <div className='rounded overflow-hidden flex'>
               <img className='img__zoom object-cover' src={m_photo_16} alt=''/>
             </div>
+
+            <button onClick={goTop} className='btn mt-20'>VOLTAR PARA O TOPO</button>
           </div>
         </div>
         </div>
       </div>
+      
     </motion.section>
   );
 };
