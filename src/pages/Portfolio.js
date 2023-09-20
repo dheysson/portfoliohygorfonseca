@@ -79,64 +79,64 @@ const Portfolio = () => {
     document.querySelectorAll('.id')[item].scrollIntoView({behavior: 'smooth'});
   }
 
-  function changeNav() {
-    let bodyHeight = document.body.getBoundingClientRect().bottom;
-    let nav = document.querySelector('nav');
-    let logo = document.querySelector('.logo');
-    let header = document.querySelector('header');
-    let navWrapper = document.querySelector('header').firstChild;
+  // function changeNav() {
+  //   let bodyHeight = document.body.getBoundingClientRect().bottom;
+  //   let nav = document.querySelector('nav');
+  //   let logo = document.querySelector('.logo');
+  //   let header = document.querySelector('header');
+  //   let navWrapper = document.querySelector('header').firstChild;
 
-    console.log(bodyHeight)
+  //   console.log(bodyHeight)
   
-    // ao scrollar para baixo
-    if(bodyHeight < 11890) {
-      nav.classList.add("xl:pt-40");
-      nav.classList.remove("xl:pt-0");
-      // navbar de linha para coluna
-      nav.classList.add("xl:flex-col");
-      nav.classList.remove("xl:flex-row");
+  //   // ao scrollar para baixo
+  //   if(bodyHeight < 11890) {
+  //     nav.classList.add("xl:pt-40");
+  //     nav.classList.remove("xl:pt-0");
+  //     // navbar de linha para coluna
+  //     nav.classList.add("xl:flex-col");
+  //     nav.classList.remove("xl:flex-row");
 
-      //esconder logo
-      logo.classList.add("xl:hidden");
+  //     //esconder logo
+  //     logo.classList.add("xl:hidden");
 
-      // mover navbar para esquerda
-      navWrapper.classList.add("xl:justify-end")
-      navWrapper.classList.remove("xl:justify-between")
+  //     // mover navbar para esquerda
+  //     navWrapper.classList.add("xl:justify-end")
+  //     navWrapper.classList.remove("xl:justify-between")
 
-      // aumentar altura do Header para que seja possivel ver todos elementos da navbar vertical
-      header.classList.remove("xl:h-[140px]")
-      header.classList.add("xl:h-[260px]")
+  //     // aumentar altura do Header para que seja possivel ver todos elementos da navbar vertical
+  //     header.classList.remove("xl:h-[140px]")
+  //     header.classList.add("xl:h-[260px]")
 
-      header.classList.remove("lg:pr-[100px]");
-      header.classList.add("lg:pr-[35px]");
-    } 
-    // ao scrollar para o topo novamente
-      else if(bodyHeight > 11890) {
-        nav.classList.remove("xl:pt-40");
-        nav.classList.add("xl:pt-0");
-        //navbar de coluna para linha
-        nav.classList.remove("xl:flex-col");
-        nav.classList.add("xl:flex-row");
+  //     header.classList.remove("lg:pr-[100px]");
+  //     header.classList.add("lg:pr-[35px]");
+  //   } 
+  //   // ao scrollar para o topo novamente
+  //     else if(bodyHeight > 11890) {
+  //       nav.classList.remove("xl:pt-40");
+  //       nav.classList.add("xl:pt-0");
+  //       //navbar de coluna para linha
+  //       nav.classList.remove("xl:flex-col");
+  //       nav.classList.add("xl:flex-row");
 
-        //exibir logo
-        logo.classList.remove("xl:hidden");
+  //       //exibir logo
+  //       logo.classList.remove("xl:hidden");
 
-        // restaurar posição inicial da navbar
-        navWrapper.classList.remove("xl:justify-end");
-        navWrapper.classList.add("xl:justify-between");
+  //       // restaurar posição inicial da navbar
+  //       navWrapper.classList.remove("xl:justify-end");
+  //       navWrapper.classList.add("xl:justify-between");
 
-        //restaurar altura inicial do Header
-        header.classList.remove("xl:h-[260px]")
-        header.classList.add("xl:h-[140px]")
+  //       //restaurar altura inicial do Header
+  //       header.classList.remove("xl:h-[260px]")
+  //       header.classList.add("xl:h-[140px]")
 
-        header.classList.remove("lg:pr-[35px]");
-        header.classList.add("lg:pr-[100px]");
-    }
-  }
-  window.addEventListener("scroll", changeNav)
+  //       header.classList.remove("lg:pr-[35px]");
+  //       header.classList.add("lg:pr-[100px]");
+  //   }
+  // }
+  // window.addEventListener("scroll", changeNav)
 
   //verificar se a navbar está acima dos elementos ao recarregar pagina
-  window.addEventListener('load', changeNav)
+  // window.addEventListener('load', changeNav)
 
 
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
@@ -154,9 +154,9 @@ const Portfolio = () => {
         justify-center gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
           {/* text */}
           <motion.div
-          initial={{ opacity: 0, y: '-50%' }}
+          initial={{ opacity: 0, y: '-60%' }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: '-50%' }}
+          exit={{ opacity: 0, y: '-60%' }}
           transition={transition1}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaverHandler}

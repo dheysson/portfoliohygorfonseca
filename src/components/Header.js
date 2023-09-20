@@ -35,8 +35,6 @@ const Header = () => {
           <Link to={'/contact'} className=' text-[#000000] hover:text-[#696c6d] transition'> Contato </Link>
         </nav>
       </div>
-      {/* Socials */}
-      {/* <Socials/> */}
       {/* mobileNav */}
       <MobileNav/>
     </header>

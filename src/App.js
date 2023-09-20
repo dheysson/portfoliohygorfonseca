@@ -26,7 +26,6 @@ const App = () => {
     <Router>
       <Header/>
       <AnimRoutes/>
-      {/*    */}
     </Router>
       {/* cursor */}
       <motion.div 

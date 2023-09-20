@@ -37,14 +37,14 @@ const MobileNav = () => {
       initial='hidden'
       animate={openMenu ? 'show' : ''}
       className='bg-white shadow-2xl w-full absolute
-      top-0 right-0 max-w-xs h-screen z-20'>
+      top-0 right-0 max-w-max h-screen z-20'>
         {/* icon */}
         <div onClick={()=> setOpenMenu(false)} className='text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer'>
           <IoMdClose />
         </div>
         {/* menu list */}
         <ul className='h-full flex flex-col justify-center items-center gap-y-8
-         text-primary font-primary font-bold text-3xl'>
+         text-primary font-primary font-bold text-3xl p-14'>
           <li>
             <Link onClick={() => setOpenMenu(false)} to='/'>Início</Link>
           </li>
