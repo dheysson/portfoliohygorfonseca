@@ -4,7 +4,7 @@ import React, {useContext, useEffect} from 'react';
 // ensaio corporativo
 import Thumb4 from '../img/portfolio/branding/thumb.webp'
 import Photo1_4 from '../img/portfolio/branding/photo (1).webp'
-import Photo2_4 from '../img/portfolio/branding/photo (2).webp'
+import Photo2_4 from '../img/portfolio/branding/photo (2).jpg'
 import Photo3_4 from '../img/portfolio/branding/photo (3).jpg'
 
 // ensaio para marca
@@ -22,7 +22,7 @@ import Photo3_2 from '../img/portfolio/esportiva/photo (3).jpg'
 // ensaio normal
 import Thumb3 from '../img/portfolio/ensaio/thumb.webp'
 import Photo1_3 from '../img/portfolio/ensaio/photo (1).webp'
-import Photo2_3 from '../img/portfolio/ensaio/photo (2).webp'
+import Photo2_3 from '../img/portfolio/ensaio/photo (2).jpg'
 import Photo3_3 from '../img/portfolio/ensaio/photo (3).jpg'
 
 //outdoor
@@ -34,6 +34,16 @@ import Photo3_5 from '../img/portfolio/outdoor/photo (3).JPG'
 import Photo1_6 from '../img/portfolio/gastronomico/photo (1).jpg'
 import Photo2_6 from '../img/portfolio/gastronomico/photo (2).jpg'
 import Photo3_6 from '../img/portfolio/gastronomico/photo (3).jpg'
+
+//gestante
+import Photo1_7 from '../img/portfolio/gestante/photo (1).jpg'
+import Photo2_7 from '../img/portfolio/gestante/photo (2).jpg'
+import Photo3_7 from '../img/portfolio/gestante/photo (3).jpg'
+
+//familia
+import Photo1_8 from '../img/portfolio/familia/photo (1).JPG'
+import Photo2_8 from '../img/portfolio/familia/photo (2).JPG'
+import Photo3_8 from '../img/portfolio/familia/photo (3).JPG'
 
 // miscelanea
 import m_photo_1 from '../img/portfolio/miscelanea/m_photo_1.webp';
@@ -239,7 +249,7 @@ const Portfolio = () => {
           </div>
         </div>
         {/* IMAGE GRIDS */}
-        <div className="container max-w-max w-[1500px] mx-auto pt-30 pb-10">
+        <div className="container max-w-max w-[1400px] mx-auto pt-30 pb-10">
           {/* fotografia de moda */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
             <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>ensaio para marca</h1>
@@ -330,10 +340,42 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
+
+          {/* ensaio gestante */}
+          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio de gestante</h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_7} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_7} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_7} />
+              </div>
+            </div>
+          </div>
+
+          {/* ensaio de famila */}
+          <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio de família</h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_8} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_8} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_8} />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Miscelanea */}
-        <div className='container pt-20 pb-20 max-w-[1500px] flex flex-col justify-center items-center'>
+        <div className='container pt-20 pb-20 max-w-[1400px] flex flex-col justify-center items-center'>
           <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 w-[100%]'>ensaio externo</h1>
           <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[100%]'>
             <div className='rounded overflow-hidden flex row-span-2'>
@@ -485,10 +527,10 @@ const Portfolio = () => {
                   <img src={Photo1_4} alt='' className='img__zoom object-cover' />
                 </div>
                 <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                    <img src={Photo3_4} alt=''/>
+                    <img src={Photo3_4} alt='' className='img__zoom'/>
                 </div>
                 <div className="w-full rounded overflow-hidden flex">
-                    <img src={Photo2_4} alt=''/>
+                    <img src={Photo2_4} className='img__zoom object-cover' alt=''/>
                 </div>
               </div>
             </div>
@@ -550,6 +592,54 @@ const Portfolio = () => {
                 <div className="w-full rounded overflow-hidden flex">
                     <img className='img__zoom object-cover' src={Photo1_5} />
                 </div>
+              </div>
+            </div>
+
+            {/* ensaio gastronomico */}
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio gastronômico</h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_6} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_6} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_6} />
+              </div>
+            </div>
+          </div>
+
+          {/* ensaio gestante */}
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio de gestante</h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_7} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_7} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_7} />
+              </div>
+            </div>
+          </div>
+          </div>
+
+          {/* ensaio de famila */}
+          <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
+            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio de família</h1>
+            <div className="title_grid">
+              <div className="w-full rounded overflow-hidden flex">
+                <img className='img__zoom object-cover' src={Photo2_8} alt=''/>
+              </div>
+              <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
+                  <img className='img__zoom' src={Photo3_8} />
+              </div>
+              <div className="w-full rounded overflow-hidden flex">
+                  <img className='img__zoom object-cover' src={Photo1_8} />
               </div>
             </div>
           </div>
