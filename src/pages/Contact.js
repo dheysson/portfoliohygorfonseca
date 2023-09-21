@@ -45,6 +45,7 @@ const Contact = () => {
         from_name: form["name"], message: form["message"], email: form["email"]
     }
 
+    document.querySelectorAll('input').forEach(element => element.value = "")
     if (!emptyValues && validEmail) {
       emailJS.send("service_ys5fnbq", "template_bw7a7i4", templateParams, "TZPoFP8sOe4vVKffU")
       .then((res) => {
