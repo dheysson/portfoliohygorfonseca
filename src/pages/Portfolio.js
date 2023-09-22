@@ -284,7 +284,7 @@ const Portfolio = () => {
           </div>     
           {/* ensaio */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>ensaio fotográfico</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>ensaio</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1_3} />
@@ -377,7 +377,7 @@ const Portfolio = () => {
 
           {/* Miscelanea */}
           <div className='container pt-20 pb-20 flex flex-col justify-center items-center'>
-            <h1 className='h1_v1 text-[42px] lg:text-7xl m-5 w-[100%]'>ensaio externo</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl m-5 w-[100%]'>outros...</h1>
             <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[100%]'>
               <div className='rounded overflow-hidden flex row-span-2'>
                 <img className='img__zoom object-cover' src={m_photo_1} alt=''/>
@@ -569,7 +569,7 @@ const Portfolio = () => {
             </div>
             {/* ensaio */}
             <div className='reveal id pt-12 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-              <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio fotográfico</h1>
+              <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio</h1>
               <div className="title_grid">
                 <div className="w-full rounded overflow-hidden">
                     <img className='img__zoom' src={Photo1_3} alt='' />
@@ -649,7 +649,7 @@ const Portfolio = () => {
 
           {/* ensaio externo */}
         <div className='reveal translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000 container pt-12 pb-12 max-w-max flex flex-col justify-center items-center'>
-          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 self-start'>ensaio externo</h1>
+          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 self-start'>outros...</h1>
           <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[90%]'>
             <div className='rounded overflow-hidden flex row-span-2'>
               <img className='img__zoom object-cover' src={m_photo_1} alt=''/>
