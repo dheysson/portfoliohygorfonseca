@@ -169,7 +169,7 @@ const Portfolio = () => {
       className='section flex items-center justify-center h-full'>
 
       {/* No modo Desktop */}
-      <div className='hidden xl:block container max-w-max mx-auto h-full w-full relative cursor-pointer xl:ml-0 xl:mr-0'>
+      <div className='hidden lg:block container max-w-max mx-auto h-full w-full relative cursor-pointer lg:ml-0 lg:mr-0'>
         <div className='flex flex-col lg:flex-row h-full items-center 
         justify-center gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
           {/* text */}
@@ -182,8 +182,8 @@ const Portfolio = () => {
           onMouseLeave={mouseLeaverHandler}
           className='flex flex-col lg:items-start h-[732px]'
           >
-              <h1 className='h1 pb-0 mt-0 xl:mt-40'>Portfólio</h1>
-              <div className='pb-5 xl:pb-20'>
+              <h1 className='h1 pb-0 mt-0 lg:mt-40'>Portfólio</h1>
+              <div className='pb-5 lg:pb-20'>
                 <a className='text-[20px]'>Para saber mais sobre mim, </a>
                 <a className='underline text-[20px]' href='/about'>clique aqui!</a>
               </div>
@@ -252,7 +252,7 @@ const Portfolio = () => {
         <div className="container max-w-max w-[1400px] mx-auto pt-30 pb-10">
           {/* fotografia de moda */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>ensaio para marca</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>ensaio para marca</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1} />
@@ -267,7 +267,7 @@ const Portfolio = () => {
           </div>
           {/* esportiva */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>fotografia esportiva</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>fotografia esportiva</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                   <img className='img__zoom object-cover' src={Photo1_2} />
@@ -282,7 +282,7 @@ const Portfolio = () => {
           </div>     
           {/* ensaio */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>ensaio fotográfico</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>ensaio fotográfico</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden">
                   <img className='img__zoom' src={Photo1_3} />
@@ -297,7 +297,7 @@ const Portfolio = () => {
           </div>
           {/* ENSAIO CORPORATIVO */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>ensaio corporativo</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>ensaio corporativo</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                 <img className='img__zoom object-cover' src={Photo1_4} alt=''/>
@@ -312,7 +312,7 @@ const Portfolio = () => {
           </div>
           {/* fotografia pre-wedding */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>pre-wedding</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>pre-wedding</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                 <img className='img__zoom object-cover' src={Photo2_5} alt=''/>
@@ -327,7 +327,7 @@ const Portfolio = () => {
           </div>
           {/* ensaio gastronomico */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl my-5'>ensaio gastronômico</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl my-5'>ensaio gastronômico</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                 <img className='img__zoom object-cover' src={Photo2_6} alt=''/>
@@ -343,7 +343,7 @@ const Portfolio = () => {
 
           {/* ensaio gestante */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio de gestante</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl m-2 text-left'>ensaio de gestante</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                 <img className='img__zoom object-cover' src={Photo2_7} alt=''/>
@@ -359,7 +359,7 @@ const Portfolio = () => {
 
           {/* ensaio de famila */}
           <div className='reveal id pt-20 translate-y-[150px] opacity-0 relative transition-all ease-in duration-1000'>
-            <h1 className='h1_v1 text-[42px] xl:text-7xl m-2 text-left'>ensaio de família</h1>
+            <h1 className='h1_v1 text-[42px] lg:text-7xl m-2 text-left'>ensaio de família</h1>
             <div className="title_grid">
               <div className="w-full rounded overflow-hidden flex">
                 <img className='img__zoom object-cover' src={Photo2_8} alt=''/>
@@ -376,7 +376,7 @@ const Portfolio = () => {
 
         {/* Miscelanea */}
         <div className='container pt-20 pb-20 max-w-[1400px] flex flex-col justify-center items-center'>
-          <h1 className='h1_v1 text-[42px] xl:text-7xl m-5 w-[100%]'>ensaio externo</h1>
+          <h1 className='h1_v1 text-[42px] lg:text-7xl m-5 w-[100%]'>ensaio externo</h1>
           <div className='grid grid-cols-3 grid-rows-3 gap-4 w-[100%]'>
             <div className='rounded overflow-hidden flex row-span-2'>
               <img className='img__zoom object-cover' src={m_photo_1} alt=''/>
@@ -434,7 +434,7 @@ const Portfolio = () => {
       </div>
 
       {/* No modo Mobile */}
-      <div className='block xl:hidden container mx-auto h-full relative cursor-pointer'>
+      <div className='block lg:hidden container mx-auto h-full relative cursor-pointer'>
         <div className='flex flex-col lg:flex-row h-full items-center 
         justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8'>
           {/* text */}

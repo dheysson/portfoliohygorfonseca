@@ -66,7 +66,7 @@ const Home = () => {
       </div>
 
       {/* Desktop */}
-      <div className='hidden xl:block container mx-auto h-full relative'>
+      <div className='hidden lg:block container mx-auto h-full relative'>
         {/* text and img wrapper */}
         <div className='flex flex-col justify-start i h-full'>
           {/* text */}
