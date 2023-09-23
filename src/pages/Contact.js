@@ -84,16 +84,16 @@ const Contact = () => {
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaverHandler}
           className='lg:flex-1 lg:pt-0 px-4'>
-            <h1 className='h1_v1 mb-5'>contate-me</h1>
-            <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler} className='flex justify-center mb-5'>
+            <h1 className='h1_v1 mb-5 lg:mb-14'>contate-me</h1>
+            <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler} className='flex justify-center mb-5 lg:mb-10'>
               <ul className='flex gap-x-20'>
                 <li>
-                  <a className='btn' href='https://www.instagram.com/ph.hygorfonseca/' target='_blank'>
+                  <a className='btn p-8' href='https://www.instagram.com/ph.hygorfonseca/' target='_blank'>
                   <ImInstagram className='w-[32px] h-[32px] xl:w-[32px] xl:h-[32px]' />
                   </a>
                 </li>
                 <li>
-                  <a className='btn' href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+site.' target='_blank'>
+                  <a className='btn p-8' href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+site.' target='_blank'>
                   <ImWhatsapp className='w-[32px] h-[32px] xl:w-[32px] xl:h-[32px]'/>
                   </a>
                 </li>
@@ -106,23 +106,23 @@ const Contact = () => {
                       <input className='outline-none border-b border-b-primary 
                       h-[60px] bg-transparent font-secondary w-full pl-3 
                       placeholder:text-[#757879]' type='text' name='name' placeholder='Seu nome' onBlur={(e) => handleChange(e)}/>
-                      { emptyValue && form["name"] == "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
+                      { emptyValue && form["name"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
                     </div>
 
                     <div className='flex flex-row w-full'>
                       <input className='outline-none border-b border-b-primary 
                       h-[60px] bg-transparent font-secondary w-full pl-3 
                       placeholder:text-[#757879]' type='text' name='email' placeholder='Seu email' onBlur={(e) => handleChange(e)}/>
-                      { emptyValue && form["email"] == "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
-                      { !validEmail && !form["email"] == "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
+                      { emptyValue && form["email"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
+                      { !validEmail && !form["email"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
                     </div>
                   </div>
 
-                  <div className='flex flex-row w-full mb-5'>
+                  <div className='flex flex-row w-full mb-5 lg:mb-10'>
                     <input className='outline-none border-b border-b-primary 
                       h-[60px] bg-transparent font-secondary w-full pl-3 
                       placeholder:text-[#757879]' type='text' name='message' placeholder='Sua mensagem' onBlur={(e) => handleChange(e)}/>
-                      { emptyValue && form["message"] == "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
+                      { emptyValue && form["message"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
                   </div>
 
                     <button className='btn mb-[30px] mx-auto lg:mx-0 self-start'>
