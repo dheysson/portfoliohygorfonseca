@@ -1,4 +1,5 @@
 import React, {useContext } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 //components
 import Header from './components/Header';
@@ -34,6 +35,8 @@ const App = () => {
       className='w-[32px] h-[32px] bg-primary 
       fixed top-0 left-0 pointer-events-none z-50 rounded-full'>
       </motion.div>
+
+      <Analytics />
     </>
   );
 };
