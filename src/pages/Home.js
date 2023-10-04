@@ -54,7 +54,7 @@ const Home = () => {
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaverHandler}
             className='w-auto h-auto p-8
-            z-10 flex flex-col items-center justify-center backdrop-blur-[2px] bg-[#ffffff76] rounded-md'>
+            z-10 flex flex-col items-center justify-center backdrop-blur-[2px] bg-[#ffffff76] rounded-md mt-[15rem]'>
             <h1 className='h1 text-[#121212] '>fotógrafo</h1>
             <p className='text-[26px] text-[#000000] font-primary mb-4'>
               Espigão D'Oeste, RO
