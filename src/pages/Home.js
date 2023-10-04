@@ -1,7 +1,8 @@
 import React, {useContext} from 'react';
 
 //import images
-import PhotographerExt from '../img/home/photographer_ext.png';
+import PhotographerMobile from '../img/home/photographer.jpg';
+import PhotographerDesktop from '../img/home/photographer_ext.png';
 
 //import Link
 import { Link } from 'react-router-dom';
@@ -39,7 +40,7 @@ const Home = () => {
               whileHover={{ scale: [1.5,1.65] }}
               transition={transition1}
 
-              src={PhotographerExt} alt='' className='scale-150'/>
+              src={PhotographerMobile} alt='' className='scale-150'/>
             </motion.div>            
           </div>
         {/* text and img wrapper */}
@@ -53,9 +54,8 @@ const Home = () => {
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaverHandler}
             className='w-auto h-auto p-8
-            z-10 flex flex-col items-center justify-center backdrop-blur-[4px] bg-[#ffffff8f] rounded-md'
-          >
-            <h1 className='h1 text-[#181818]'>fotógrafo</h1>
+            z-10 flex flex-col items-center justify-center backdrop-blur-[2px] bg-[#ffffff76] rounded-md'>
+            <h1 className='h1 text-[#121212] '>fotógrafo</h1>
             <p className='text-[26px] text-[#000000] font-primary mb-4'>
               Espigão D'Oeste, RO
             </p>
@@ -81,7 +81,7 @@ const Home = () => {
             lg:w-auto z-10 flex flex-col justify-center items-center'
           >
             <div className='flex flex-col h-[275px] justify-between'>
-              <h1 className='h1 mb-0'>fotógrafo</h1>
+              <h1 className='h1 mb-0 '>fotógrafo</h1>
               <p className='text-[26px] lg:text-[36px] font-primary'>
                 Espigão D'Oeste, RO
               </p>
@@ -102,7 +102,7 @@ const Home = () => {
               <motion.img
               whileHover={{ scale: 1.1 }}
               transition={transition1}
-              src={PhotographerExt} alt=''/>
+              src={PhotographerDesktop} alt=''/>
             </motion.div>            
           </div>
         </div>

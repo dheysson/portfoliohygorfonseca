@@ -32,7 +32,7 @@
   }
 
   .h1 {
-    @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
+    @apply text-[4rem] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
   }
 
   .h1_v1 {
@@ -48,6 +48,10 @@
   
   .btn.light {
     @apply rounded-md py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-white text-black;
+  }
+
+  li {
+    @apply border-b-2 border-[#00000050] pb-4;
   }
 
   * {
