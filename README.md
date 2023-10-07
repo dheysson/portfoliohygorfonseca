@@ -1,6 +1,6 @@
-# Portifólio - Fotógrafo Hygor Fonseca
+# Portfólio - Fotógrafo Hygor Fonseca
 
-Developed with ReactJS & TailwindCSS
+Desenvolvido com ReactJS & TailwindCSS
 
-Deploy by Vercel
-https://portfoliohygorfonseca.vercel.app/
+Deploy por Vercel
+Acesse: https://portfoliohygorfonseca.vercel.app/
