@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 
 import Photographer from '../img/contact/photographer.jpg';
 
@@ -16,6 +16,17 @@ import {
 } from 'react-icons/im';
 
 const Contact = () => {
+
+  useEffect(() => {
+    var sm = window.matchMedia('(max-width: 640px)')
+    var md = window.matchMedia('(max-width: 768px)')
+    var lg = window.matchMedia('(max-width: 1024px)')
+    var xl = window.matchMedia('(max-width: 1192px)')
+
+    if(sm.matches || md.matches || lg.matches)
+      document.querySelector('header').style.backgroundColor = '#000000'
+  })
+
   const [form, setForm] = useState({
     name: "",
     email: "",

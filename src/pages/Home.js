@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 
 //import images
 import PhotographerMobile from '../img/home/photographer.jpg';
@@ -16,6 +16,17 @@ import { transition1 } from '../transitions';
 import { CursorContext } from '../context/CursorContext';
 
 const Home = () => {
+
+  useEffect(() => {
+    var sm = window.matchMedia('(max-width: 640px)')
+    var md = window.matchMedia('(max-width: 768px)')
+    var lg = window.matchMedia('(max-width: 1024px)')
+    var xl = window.matchMedia('(max-width: 1192px)')
+
+    if(sm.matches || md.matches || lg.matches)
+      document.querySelector('header').style.backgroundColor = '#ffffff00'
+  })
+
   const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext)
   return (
     <motion.section 
@@ -28,19 +39,10 @@ const Home = () => {
       {/* Mobile */}
       <div className='block xl:hidden container mx-auto h-full relative'>
         {/* image */}
-        <div className='absolute pt-40 h-full overflow-hidden'>
-            <motion.div
-            initial={{scale: 0}}
-            animate={{scale: 1}}
-            exit={{scale: 0}}
-            transition={transition1}
-            className=''
-            >
-              <motion.img
-              whileHover={{ scale: [1.5,1.65] }}
-              transition={transition1}
-
-              src={PhotographerMobile} alt='' className='scale-150'/>
+        <div className='absolute h-full overflow-hidden'>
+            <motion.div initial={{scale: 0}} animate={{scale: 1}} exit={{scale: 0}} transition={transition1} className='flex w-full h-full'>
+              <motion.img whileHover={{ scale: [1.5,1.65] }} transition={transition1}
+                  src={PhotographerMobile} alt='' className='scale-150 flex object-contain'/>
             </motion.div>            
           </div>
         {/* text and img wrapper */}
@@ -54,7 +56,7 @@ const Home = () => {
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaverHandler}
             className='w-auto h-auto p-8
-            z-10 flex flex-col items-center justify-center backdrop-blur-[2px] bg-[#ffffff76] rounded-md mt-[15rem]'>
+            z-10 flex flex-col items-center justify-center backdrop-blur-[2px] bg-[#ffffffa4] rounded-md mt-[15rem]'>
             <h1 className='h1 text-[#121212] '>fotógrafo</h1>
             <p className='text-[26px] text-[#000000] font-primary mb-4'>
               Espigão D'Oeste, RO
@@ -81,7 +83,7 @@ const Home = () => {
             lg:w-auto z-10 flex flex-col justify-center items-center'
           >
             <div className='flex flex-col h-[275px] justify-between'>
-              <h1 className='h1 mb-0 '>fotógrafo</h1>
+              <h1 className='h1 mb-0'>Fotógrafo</h1>
               <p className='text-[26px] lg:text-[36px] font-primary'>
                 Espigão D'Oeste, RO
               </p>

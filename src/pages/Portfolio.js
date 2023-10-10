@@ -76,6 +76,17 @@ import { goTop } from '../scripts/goTop'
 // import { BsFillArrowRightSquareFill } from 'react-icons/bs'
 
 const Portfolio = () => {
+
+  useEffect(() => {
+    var sm = window.matchMedia('(max-width: 640px)')
+    var md = window.matchMedia('(max-width: 768px)')
+    var lg = window.matchMedia('(max-width: 1024px)')
+    var xl = window.matchMedia('(max-width: 1192px)')
+
+    if(sm.matches || md.matches || lg.matches)
+      document.querySelector('header').style.backgroundColor = '#000000';
+  })
+
   // animação vertical dos elementos ao descer página
   function reveal() {
     var reveals = document.querySelectorAll(".reveal")
@@ -162,10 +173,10 @@ const Portfolio = () => {
   const {mouseEnterHandler, mouseLeaverHandler} = useContext(CursorContext)
   return (
     <motion.section 
-      initial={{opacity: 0, y: '100%'}}
-      animate={{opacity: 1, y: 0}}
-      exit={{opacity: 0, y: '100%'}}
-      transition={transition1}
+      // initial={{opacity: 0, y: '100%'}}
+      // animate={{opacity: 1, y: 0}}
+      // exit={{opacity: 0, y: '100%'}}
+      // transition={transition1}
       className='section flex items-center justify-center h-full'>
 
       {/* No modo Desktop */}
@@ -184,17 +195,26 @@ const Portfolio = () => {
           className='flex flex-col lg:items-start h-[732px]'
           >
               <h1 className='h1 pb-0 mt-0 lg:mt-40'>Portfólio</h1>
-              <div className='pb-5 lg:pb-20'>
-                <a className='text-[20px]'>Para saber mais sobre mim, </a>
-                <a className='underline text-[20px]' href='/about'>clique aqui!</a>
+              <div className='pb-5 lg:pb-20 w-full max-w-[28rem]'>
+                <a className='text-[20px]'>Página dedicada para mostrar brevemente meu trabalho como fotógrafo.</a>
               </div>
-              <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-0'>
-                  Contate-me
-              </Link>
+              <div className='flex flex-row gap-x-10'>
+                <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-auto '>
+                    Contate-me
+                </Link>
+                <Link to={'/about'} className='btn mb-0 mx-auto lg:mx-auto '>
+                    Sobre mim
+                </Link>
+              </div>
           </motion.div>
 
           {/* THUMBS*/}
-          <div className='grid grid-cols-2 gap-2 m-2 relative'>
+          <motion.div 
+          initial={{ opacity: 0, y: '-40%' }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: '-40%' }}
+          transition={transition1}
+          className='grid grid-cols-2 gap-2 m-2 relative'>
             {/* image */}
             <motion.div
             whileHover={{opacity: '0.5'}}
@@ -247,7 +267,7 @@ const Portfolio = () => {
                 hover:scale-110 transition-all duration-500 rounded' src={Thumb4} alt=''/>
               </div>
             </motion.div> 
-          </div>
+          </motion.div>
         </div>
 
         {/* IMAGE GRIDS */}
@@ -451,14 +471,22 @@ const Portfolio = () => {
           className='flex flex-col lg:items-start h-auto pb-5'
           >
               <h1 className='h1 pb-0 mt-0 xl:mt-40'>Portfólio</h1>
-              <div className='pb-5 xl:pb-20'>
-                <a className='text-[20px]'>Para saber mais sobre mim, </a>
-                <a className='underline text-[20px]' href='/about'>clique aqui!</a>
+              <br />
+              <div className='pb-5 xl:pb-20 mx-4'>
+                <a className='text-[20px]'>Página dedicada para mostrar brevemente meu trabalho.</a>
               </div>
-              <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-0'>
-                  Contate-me
-              </Link>
+              <div className='flex flex-row mx-3'>
+                <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-0'>
+                    Contate-me
+                </Link>
+                <Link to={'/about'} className='btn mb-0 mx-auto lg:mx-0'>
+                    Sobre mim
+                </Link>
+                
+              </div>
           </motion.div>
+
+          <br />
 
           {/* THUMBS*/}
           <div className='grid grid-rows-2 gap-2 m-2 relative'>

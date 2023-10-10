@@ -28,7 +28,7 @@ const MobileNav = () => {
   return (
     <nav className='text-primary xl:hidden'>
       {/* nav open button */}
-      <div onClick={()=> setOpenMenu(true)} className='text-3xl cursor-pointer'>
+      <div onClick={()=> setOpenMenu(true)} className='text-3xl cursor-pointer text-[#ffffff] transition-all duration-300'>
         <CgMenuRight />
       </div>
       {/* menu */}
