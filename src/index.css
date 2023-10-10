@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden text-primary font-secondary bg-[#fafafd];
+    @apply overflow-x-hidden text-primary font-secondary bg-[#ffffff];
   }
 
   .title_grid {
