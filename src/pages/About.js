@@ -19,7 +19,7 @@ const About = () => {
     var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches) {
-      document.querySelector('header').style.backgroundColor = '#000000'
+      document.querySelector('header').style.backgroundColor = '#0f0c0c'
     }
   })
 
@@ -50,7 +50,7 @@ const About = () => {
             exit={{opacity: 0, y: '-80%'}}
             transition={transition1}
             className='flex-1 pt-20 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center
-            items-center lg:items-start mx-8'>
+            items-center lg:items-center mx-8'>
               <h1 className='h1_v1'>Sobre mim</h1>
               <br />
               <p className='mb-12 max-w-sm text-center'>

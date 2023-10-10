@@ -4,50 +4,50 @@ import React, {useContext, useEffect} from 'react';
 // ensaio corporativo
 import Thumb4 from '../img/portfolio/branding/thumb.webp'
 import Photo1_4 from '../img/portfolio/branding/photo (1).webp'
-import Photo2_4 from '../img/portfolio/branding/photo (2).jpg'
-import Photo3_4 from '../img/portfolio/branding/photo (3).jpg'
+import Photo2_4 from '../img/portfolio/branding/photo (2).webp'
+import Photo3_4 from '../img/portfolio/branding/photo (3).webp'
 
 // ensaio para marca
 import Thumb1 from '../img/portfolio/ensaiomarca/thumb.webp'
 import Photo1 from '../img/portfolio/ensaiomarca/photo (1).webp'
 import Photo2 from '../img/portfolio/ensaiomarca/photo (2).webp'
-import Photo3 from '../img/portfolio/ensaiomarca/photo (3).jpg'
+import Photo3 from '../img/portfolio/ensaiomarca/photo (3).webp'
 
 // fotos esportivas
 import Thumb2 from '../img/portfolio/esportiva/thumb.webp'
 import Photo1_2 from '../img/portfolio/esportiva/photo (1).webp'
-import Photo2_2 from '../img/portfolio/esportiva/photo (2).jpg'
-import Photo3_2 from '../img/portfolio/esportiva/photo (3).jpg'
+import Photo2_2 from '../img/portfolio/esportiva/photo (2).webp'
+import Photo3_2 from '../img/portfolio/esportiva/photo (3).webp'
 
-// ensaio normal
+// ensaio
 import Thumb3 from '../img/portfolio/ensaio/thumb.webp'
 import Photo1_3 from '../img/portfolio/ensaio/photo (1).webp'
-import Photo2_3 from '../img/portfolio/ensaio/photo (2).jpg'
-import Photo3_3 from '../img/portfolio/ensaio/photo (3).jpg'
+import Photo2_3 from '../img/portfolio/ensaio/photo (2).webp'
+import Photo3_3 from '../img/portfolio/ensaio/photo (3).webp'
 
-//outdoor
-import Photo1_5 from '../img/portfolio/outdoor/photo (1).JPG'
-import Photo2_5 from '../img/portfolio/outdoor/photo (2).JPG'
-import Photo3_5 from '../img/portfolio/outdoor/photo (3).JPG'
+//pre wedding
+import Photo1_5 from '../img/portfolio/outdoor/photo (1).webp'
+import Photo2_5 from '../img/portfolio/outdoor/photo (2).webp'
+import Photo3_5 from '../img/portfolio/outdoor/photo (3).webp'
 
 //gastronomico
-import Photo1_6 from '../img/portfolio/gastronomico/photo (1).jpg'
-import Photo2_6 from '../img/portfolio/gastronomico/photo (2).jpg'
-import Photo3_6 from '../img/portfolio/gastronomico/photo (3).jpg'
+import Photo1_6 from '../img/portfolio/gastronomico/photo (1).webp'
+import Photo2_6 from '../img/portfolio/gastronomico/photo (2).webp'
+import Photo3_6 from '../img/portfolio/gastronomico/photo (3).webp'
 
 //gestante
-import Photo1_7 from '../img/portfolio/gestante/photo (1).jpg'
-import Photo2_7 from '../img/portfolio/gestante/photo (2).jpg'
-import Photo3_7 from '../img/portfolio/gestante/photo (3).jpg'
+import Photo1_7 from '../img/portfolio/gestante/photo (1).webp'
+import Photo2_7 from '../img/portfolio/gestante/photo (2).webp'
+import Photo3_7 from '../img/portfolio/gestante/photo (3).webp'
 
 //familia
-import Photo1_8 from '../img/portfolio/familia/photo (1).JPG'
-import Photo2_8 from '../img/portfolio/familia/photo (2).JPG'
-import Photo3_8 from '../img/portfolio/familia/photo (3).JPG'
+import Photo1_8 from '../img/portfolio/familia/photo (1).webp'
+import Photo2_8 from '../img/portfolio/familia/photo (2).webp'
+import Photo3_8 from '../img/portfolio/familia/photo (3).webp'
 
 // miscelanea
 import m_photo_1 from '../img/portfolio/miscelanea/m_photo_1.webp';
-import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.jpg';
+import m_photo_2 from '../img/portfolio/miscelanea/m_photo_2.webp';
 import m_photo_3 from '../img/portfolio/miscelanea/m_photo_3.webp';
 import m_photo_4 from '../img/portfolio/miscelanea/m_photo_4.webp';
 import m_photo_5 from '../img/portfolio/miscelanea/m_photo_5.webp';
@@ -84,7 +84,7 @@ const Portfolio = () => {
     var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches)
-      document.querySelector('header').style.backgroundColor = '#000000';
+      document.querySelector('header').style.backgroundColor = '#0f0c0c';
   })
 
   // animação vertical dos elementos ao descer página
@@ -295,10 +295,10 @@ const Portfolio = () => {
                   <img className='img__zoom object-cover' src={Photo1_2} />
               </div>
               <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                  <img className='img__zoom' src={Photo2_2} />
+                  <img className='img__zoom' src={Photo3_2} />
               </div>
               <div className="w-full rounded overflow-hidden flex">
-                  <img className='img__zoom object-cover' src={Photo3_2} />
+                  <img className='img__zoom object-cover' src={Photo2_2} />
               </div>
             </div>
           </div>     
@@ -588,10 +588,10 @@ const Portfolio = () => {
                     <img className='img__zoom object-cover' src={Photo1_2} alt='' />
                 </div>
                 <div className="w-full col-span-2 row-span-2 rounded overflow-hidden">
-                    <img className='img__zoom' src={Photo2_2} alt=''/>
+                    <img className='img__zoom' src={Photo3_2} alt=''/>
                 </div>
                 <div className="w-full rounded overflow-hidden flex">
-                    <img className='img__zoom object-cover' src={Photo3_2} alt=''/>
+                    <img className='img__zoom object-cover' src={Photo2_2} alt=''/>
                 </div>
               </div>
             </div>

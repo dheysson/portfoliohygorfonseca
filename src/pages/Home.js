@@ -82,12 +82,12 @@ const Home = () => {
             className='absolute h-full bottom-[20px]
             lg:w-auto z-10 flex flex-col justify-center items-center'
           >
-            <div className='flex flex-col h-[275px] justify-between'>
+            <div className='flex flex-col max-h-[20rem]'>
               <h1 className='h1 mb-0'>Fotógrafo</h1>
               <p className='text-[26px] lg:text-[36px] font-primary'>
                 Espigão D'Oeste, RO
               </p>
-            <Link to={'/portfolio'} className='btn w-[240px]'>Surpreenda-se</Link>  
+            <Link to={'/portfolio'} className='btn w-[240px] mt-12'>Surpreenda-se</Link>  
             </div>
           </motion.div>
 

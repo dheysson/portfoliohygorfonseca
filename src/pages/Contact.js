@@ -24,7 +24,7 @@ const Contact = () => {
     var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches)
-      document.querySelector('header').style.backgroundColor = '#000000'
+      document.querySelector('header').style.backgroundColor = '#0f0c0c'
   })
 
   const [form, setForm] = useState({
