@@ -202,7 +202,7 @@ const Portfolio = () => {
                 <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-auto '>
                     Contate-me
                 </Link>
-                <Link to={'/about'} className='btn mb-0 mx-auto lg:mx-auto '>
+                <Link to={'/about'} className='btn bg-[#ffffff] border-[2px] border-[#000000] text-[#000000] mb-0 mx-auto lg:mx-auto '>
                     Sobre mim
                 </Link>
               </div>
@@ -479,7 +479,7 @@ const Portfolio = () => {
                 <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-0'>
                     Contate-me
                 </Link>
-                <Link to={'/about'} className='btn mb-0 mx-auto lg:mx-0'>
+                <Link to={'/about'} className='btn bg-[#ffffff] border-[2px] text-[#000000] border-[#000000] mb-0 mx-auto lg:mx-0'>
                     Sobre mim
                 </Link>
                 
