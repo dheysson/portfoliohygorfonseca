@@ -54,6 +54,13 @@
     @apply border-b-2 border-[#00000050] pb-4;
   }
 
+  .dark {
+    @apply text-[#ffffff] bg-[#0f0c0c] invert-1;
+  }
+  .light {
+    @apply text-[#000000] bg-[#ffffff00] invert-0;
+  }
+
   * {
     -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
     -webkit-touch-callout: none; /* iOS Safari */

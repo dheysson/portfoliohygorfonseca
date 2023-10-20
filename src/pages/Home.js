@@ -25,7 +25,6 @@ const Home = () => {
 
     if(sm.matches || md.matches || lg.matches)
       document.querySelector('header').style.backgroundColor = '#ffffff00';
-      document.body.style.backgroundColor = '#110d0c';
   })
 
   const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext)
