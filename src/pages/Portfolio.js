@@ -85,6 +85,7 @@ const Portfolio = () => {
 
     if(sm.matches || md.matches || lg.matches)
       document.querySelector('header').style.backgroundColor = '#0f0c0c';
+      document.body.style.backgroundColor = '#ffffff';
   })
 
   // animação vertical dos elementos ao descer página

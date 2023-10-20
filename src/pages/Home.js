@@ -24,7 +24,8 @@ const Home = () => {
     var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches)
-      document.querySelector('header').style.backgroundColor = '#ffffff00'
+      document.querySelector('header').style.backgroundColor = '#ffffff00';
+      document.body.style.backgroundColor = '#110d0c';
   })
 
   const { mouseEnterHandler, mouseLeaverHandler } = useContext(CursorContext)
@@ -37,7 +38,7 @@ const Home = () => {
     className='section xl:overflow-hidden'
     >
       {/* Mobile */}
-      <div className='block xl:hidden container mx-auto h-full relative'>
+      <div className='flex xl:hidden container mx-auto h-full relative justify-center'>
         {/* image */}
         <div className='absolute h-full overflow-hidden'>
             <motion.div initial={{scale: 0}} animate={{scale: 1}} exit={{scale: 0}} transition={transition1} className='flex w-full h-full'>
@@ -68,7 +69,7 @@ const Home = () => {
       </div>
 
       {/* Desktop */}
-      <div className='hidden lg:block container mx-auto h-full relative'>
+      <div className='hidden xl:block container mx-auto h-full relative'>
         {/* text and img wrapper */}
         <div className='flex flex-col justify-start i h-full'>
           {/* text */}

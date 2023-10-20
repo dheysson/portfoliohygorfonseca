@@ -19,7 +19,8 @@ const About = () => {
     var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches) {
-      document.querySelector('header').style.backgroundColor = '#0f0c0c'
+      document.querySelector('header').style.backgroundColor = '#0f0c0c';
+      document.body.style.backgroundColor = '#ffffff';
     }
   })
 

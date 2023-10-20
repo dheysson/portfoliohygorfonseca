@@ -24,7 +24,8 @@ const Contact = () => {
     var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches)
-      document.querySelector('header').style.backgroundColor = '#0f0c0c'
+      document.querySelector('header').style.backgroundColor = '#0f0c0c';
+      document.body.style.backgroundColor = '#ffffff';
   })
 
   const [form, setForm] = useState({
@@ -94,18 +95,18 @@ const Contact = () => {
           transition={transition1}
           onMouseEnter={mouseEnterHandler}
           onMouseLeave={mouseLeaverHandler}
-          className='lg:flex-1 lg:pt-0 px-4'>
+          className='lg:flex-1 lg:pt-0 px-4 mt-10'>
             <h1 className='h1_v1 mb-5 lg:mb-14'>contate-me</h1>
-            <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler} className='flex justify-center mb-5 lg:mb-10'>
+            <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaverHandler} className='flex justify-around mb-5 lg:mb-10'>
               <ul className='flex gap-x-20'>
                 <li>
-                  <a className='btn p-8' href='https://www.instagram.com/ph.hygorfonseca/' target='_blank'>
-                  <ImInstagram className='w-[32px] h-[32px] xl:w-[32px] xl:h-[32px]' />
+                  <a className='btn p-6' href='https://www.instagram.com/ph.hygorfonseca/' target='_blank'>
+                  <ImInstagram className='w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]' />
                   </a>
                 </li>
                 <li>
-                  <a className='btn p-8' href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+site.' target='_blank'>
-                  <ImWhatsapp className='w-[32px] h-[32px] xl:w-[32px] xl:h-[32px]'/>
+                  <a className='btn p-6' href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+site.' target='_blank'>
+                  <ImWhatsapp className='w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]'/>
                   </a>
                 </li>
               </ul>
