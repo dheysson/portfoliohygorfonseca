@@ -19,7 +19,7 @@ const Header = () => {
         onMouseEnter={mouseEnterHandler}
         onMouseLeave={mouseLeaverHandler}
         to={'/'} className='logo max-w-[220px] lg:max-w-[280px]'>
-          <img className='logo_img invert-1 transition-all duration-300' alt='' src={Logo}/>
+          <img className='logo_img invert xl:invert-0 transition-all duration-300' alt='' src={Logo}/>
         </Link>
         {/* {nav inicialmente oculto - aparece no modo desktop} */}
         <nav
