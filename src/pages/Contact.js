@@ -23,9 +23,8 @@ const Contact = () => {
     var lg = window.matchMedia('(max-width: 1024px)')
     var xl = window.matchMedia('(max-width: 1192px)')
 
-    if(sm.matches || md.matches || lg.matches)
+    if(sm.matches || md.matches || lg.matches) 
       document.querySelector('header').style.backgroundColor = '#0f0c0c';
-
   })
 
   const [form, setForm] = useState({
@@ -117,14 +116,14 @@ const Contact = () => {
                     <div className='flex flex-row'>
                       <input className='outline-none border-b border-b-primary 
                       h-[60px] bg-transparent font-secondary w-full pl-3 
-                      placeholder:text-[#757879]' type='text' name='name' placeholder='Seu nome' onBlur={(e) => handleChange(e)}/>
+                      placeholder:text-[#757879]' type='text' name='name' placeholder='nome' onBlur={(e) => handleChange(e)}/>
                       { emptyValue && form["name"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
                     </div>
 
                     <div className='flex flex-row w-full'>
                       <input className='outline-none border-b border-b-primary 
                       h-[60px] bg-transparent font-secondary w-full pl-3 
-                      placeholder:text-[#757879]' type='text' name='email' placeholder='Seu email' onBlur={(e) => handleChange(e)}/>
+                      placeholder:text-[#757879]' type='text' name='email' placeholder='email' onBlur={(e) => handleChange(e)}/>
                       { emptyValue && form["email"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
                       { !validEmail && !form["email"] === "" ? <ImWarning className='ml-2 w-[26px] h-[26px] self-end' color='red' /> : ""}
                     </div>

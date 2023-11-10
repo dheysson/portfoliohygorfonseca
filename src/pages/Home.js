@@ -87,25 +87,14 @@ const Home = () => {
               <p className='text-[26px] lg:text-[36px] font-primary'>
                 Espigão D'Oeste, RO
               </p>
-            <Link to={'/portfolio'} className='btn w-[240px] mt-12'>Surpreenda-se</Link>  
+            <Link to={'/portfolio'} className='btn w-[240px] mt-8'>Surpreenda-se</Link>  
             </div>
           </motion.div>
 
           {/* image */}
-          <div className='flex justify-end max-h-96
-           lg:max-h-max'>
-            <motion.div
-            initial={{scale: 0}}
-            animate={{scale: 1}}
-            exit={{scale: 0}}
-            transition={transition1}
-            className='lg:-right-14 xl:overflow-hidden'
-            >
-              <motion.img
-              whileHover={{ scale: 1.1 }}
-              transition={transition1}
-              src={PhotographerDesktop} alt=''/>
-            </motion.div>            
+          <div className='flex justify-end max-h-96 lg:max-h-max'>
+            <motion.div initial={{scale: 0}} animate={{scale: 1}} exit={{scale: 0}} transition={transition1} className='lg:-right-14 xl:overflow-hidden'>
+              <motion.img whileHover={{ scale: 1.1 }} transition={transition1} src={PhotographerDesktop} className='w-[65%]' alt=''/></motion.div>            
           </div>
         </div>
       </div>
