@@ -23,7 +23,7 @@ const Home = () => {
     var sm = window.matchMedia('(max-width: 640px)')
     var md = window.matchMedia('(max-width: 768px)')
     var lg = window.matchMedia('(max-width: 1024px)')
-    var xl = window.matchMedia('(max-width: 1192px)')
+    // var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches)
       document.querySelector('header').style.backgroundColor = '#ffffff00';

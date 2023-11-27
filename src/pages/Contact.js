@@ -10,6 +10,9 @@ import { CursorContext } from '../context/CursorContext'
 
 import emailJS from '@emailjs/browser'
 
+import { FaArrowRight } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
+
 import {
   ImInstagram,
   ImWhatsapp, ImWarning
@@ -21,7 +24,7 @@ const Contact = () => {
     var sm = window.matchMedia('(max-width: 640px)')
     var md = window.matchMedia('(max-width: 768px)')
     var lg = window.matchMedia('(max-width: 1024px)')
-    var xl = window.matchMedia('(max-width: 1192px)')
+    // var xl = window.matchMedia('(max-width: 1192px)')
 
     if(sm.matches || md.matches || lg.matches) 
       document.querySelector('header').style.backgroundColor = '#0f0c0c';
@@ -35,6 +38,8 @@ const Contact = () => {
 
   const [validEmail, setValidEmail] = useState(false);
   const [emptyValue, setEmptyValue] = useState(false);
+
+  const { SERVICEID = '', TEMPLATEID = '', PUBLICKEY = '' } = process.env;
 
   const handleChange = (e) => {
     let newProp = form;
@@ -58,7 +63,7 @@ const Contact = () => {
 
     document.querySelectorAll('input').forEach(element => element.value = "")
     if (!emptyValues && validEmail) {
-      emailJS.send("service_ys5fnbq", "template_bw7a7i4", templateParams, "TZPoFP8sOe4vVKffU")
+      emailJS.send('service_ys5fnbq', 'template_bw7a7i4', templateParams, 'TZPoFP8sOe4vVKffU')
       .then((res) => {
         alert("email enviado", res.status, res.text)
       })
@@ -101,11 +106,13 @@ const Contact = () => {
                 <li>
                   <a className='btn p-6' href='https://www.instagram.com/ph.hygorfonseca/' target='_blank'>
                   <ImInstagram className='w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]' />
+                  <FaArrowRight className='ml-2' />
                   </a>
                 </li>
                 <li>
                   <a className='btn p-6' href='https://api.whatsapp.com/send?phone=5569999505421&text=Ol%C3%A1%2C+vim+pelo+site.' target='_blank'>
                   <ImWhatsapp className='w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]'/>
+                  <FaArrowRight className='ml-2' />
                   </a>
                 </li>
               </ul>
@@ -138,6 +145,7 @@ const Contact = () => {
 
                     <button className='btn mb-[30px] mx-auto lg:mx-0 self-start'>
                       Enviar
+                      <IoIosSend className='ml-3 w-[1.5rem] h-[1.5rem]' />
                     </button>
                 </form>
             </motion.div>
