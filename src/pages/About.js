@@ -30,7 +30,7 @@ const About = () => {
       animate={{opacity: 1, y: 0}}
       exit={{opacity: 0, y: '-50%'}}
       transition={transition1}
-      className='section h-full'
+      className='section'
       >
         <div 
         onMouseEnter={mouseEnterHandler}
@@ -41,7 +41,7 @@ const About = () => {
           text-center lg:text-left lg:pt-16 xl:pt-36'>
             {/* image */}
             <div className='flex-1 max-h-96 lg:max-h-max order-2 lg:order-none'>
-              <img src={Photographer} alt=''/>
+              <img src={Photographer} alt='' />
             </div>
             {/* text */}
             <motion.div 
