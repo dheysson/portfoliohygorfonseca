@@ -1,4 +1,5 @@
 import React, {useContext, useEffect} from 'react';
+import { FaArrowRight } from "react-icons/fa";
 
 
 // ensaio corporativo
@@ -201,7 +202,7 @@ const Portfolio = () => {
               </div>
               <div className='flex flex-row gap-x-10'>
                 <Link to={'/contact'} className='btn mb-0 mx-auto lg:mx-auto '>
-                    Contate-me
+                    Contate-me <FaArrowRight className='ml-2' />
                 </Link>
                 <Link to={'/about'} className='btn bg-[#ffffff] border-[2px] border-[#000000] text-[#000000] mb-0 mx-auto lg:mx-auto '>
                     Sobre mim
